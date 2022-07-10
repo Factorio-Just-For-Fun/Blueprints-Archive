@@ -1,0 +1,14 @@
+{
+  "name": "blueprintbook",
+  "version": "1.0.0",
+  "description": "Creates the FJFF Starter Blueprint Book",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Ashy",
+  "license": "ISC",
+  "dependencies": {
+    "clipboardy": "^3.0.0"
+  }
+}
