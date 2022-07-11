@@ -91,7 +91,7 @@ const blueprintBook = new BlueprintBook({
         item: "blueprint_book",
         label: "Science EXPENSIVE mskitty",
         icons: [
-          { signal: { type: "item", name: "logistic-science-pack" }, index: 1 }
+          { signal: { type: "item", name: "automation-science-pack" }, index: 1 }
         ],
         blueprints: [],
         active_index: 0,
