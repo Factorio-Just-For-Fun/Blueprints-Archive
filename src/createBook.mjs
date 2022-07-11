@@ -118,7 +118,6 @@ const blueprintBook = new BlueprintBook({
     .explode()
   )
   .addObject("./blueprints/malls/coma-spzi.txt")
-  .addObject("./blueprints/wallmoeba-spzi.txt")
   .addObject("./blueprints/belt/intermediates/green-chips-expensive-drsupergood.txt")
   .addObject("./blueprints/belt/intermediates/red-chips-expensive-drsupergood.txt")
   .addObject("./blueprints/smelting/kos-ash.txt")
