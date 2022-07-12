@@ -1,10 +1,7 @@
-import util from './util.mjs';
-import { parseObject, BlueprintBook } from './objects.mjs';
-
-import fs from 'fs/promises';
+import { parseObject, BlueprintBook } from '../objects.mjs';
 
 //
-// Start Progrma
+// Start Program
 //
 
 const blueprintBook = new BlueprintBook({
@@ -17,8 +14,7 @@ const blueprintBook = new BlueprintBook({
       { signal: { type: "virtual", name: "signal-F" }, index: 3 },
       { signal: { type: "virtual", name: "signal-F" }, index: 4 }
     ],
-    description: "Starter Game Blueprints for the Factorio Just For Fun Server. Note that several blueprint books have been filtered to remove prints that we don't use on the server.\n\n" +
-      "Compiled and filtered by i_cant_think_of_a_username. Blueprint station names have been standardized to include spaces.",
+    description: "Starter Game Blueprints for the Factorio Just For Fun Server. Compiled, scripted, and filtered by Ashy",
     blueprints: [],
     active_index: 0,
     version: 281479275675648
@@ -157,22 +153,4 @@ const blueprintBook = new BlueprintBook({
   .addObject("./blueprints/deconstruction-ash.txt")
   .addObject("./blueprints/malls/military-hub-2.txt")
 
-  .modifyAllStationNames(name => name.replace(/\[\/?color(\=((\d{1,3},\d{1,3},\d{1,3})|(\w+)))?\]/g, '')) // Remove colors
-  .modifyAllStationNames(name => name.replace(/(\s\*)+$/g, '')) // Remove stars
-  .modifyAllStationNames(name => name.replace(/3\-8/g, '')) // Remove 3-8 indicators
-  .modifyAllStationNames(name => name.replace(/\[img=(item|fluid).([\w\-]+)\]/g, '[$1=$2]')) // Fix [img=item/fluid.name] with [item/fluid=name]
-  .modifyAllStationNames(name => (name == '' || name == '[U]') ? '☭ Communism' : name) // Replace unnamed stations with Communism
-  .modifyAllStationNames(name => name.trim()) // Trim all station names
-
-  .modifyAllDescriptions(description => description ? description : '')
-  .modifyAllDescriptions(description => description.replace(/\d{4}-\d{2}-\d{2} FJFF Common Blueprints compiled by i_cant.\nhttps:\/\/discord\.gg\/ehHEDDnPWA/g, '').trim()) // Remove old version tags
-  .modifyAllDescriptions(description => `${ description ? description + "\n\n" : "" }${ new Date().toISOString().split('T')[0] } FJFF Blueprints compiled by Ashy.\nhttps://discord.gg/ehHEDDnPWA`); // Add new version tags
-
-const string = await util.encodeBlueprintString(blueprintBook.toObject());
-
-if (!process.env.CI) {
-  const clipboard = (await import('clipboardy')).default;
-  clipboard.writeSync(string);
-}
-
-await fs.writeFile("book.txt", string, "utf-8");
+export default blueprintBook;
