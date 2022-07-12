@@ -1,3 +1,6 @@
 node_modules/
 out/
 explode/
+
+# Keep this file private
+src/books/all.mjs
