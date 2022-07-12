@@ -15,7 +15,7 @@ const blueprintBook = new BlueprintBook({
       { signal: { type: "virtual", name: "signal-F" }, index: 3 },
       { signal: { type: "virtual", name: "signal-F" }, index: 4 }
     ],
-    description: "Starter Game Blueprints for the Factorio Just For Fun Server. Compiled, scripted, and filtered by Ashy",
+    description: "Starter Game Blueprints for the Factorio Just For Fun Server. Compiled, scripted, and filtered by Ashy." + (process.env.GITHUB_SHA ? '\nCommit: #' + process.env.GITHUB_SHA.substring(0, 7) : ''),
     blueprints: [],
     active_index: 0,
     version: 281479275675648
