@@ -1,4 +1,5 @@
 import { parseObject, BlueprintBook } from '../objects.mjs';
+import util from '../util.mjs';
 
 //
 // Start Program
@@ -151,6 +152,9 @@ const blueprintBook = new BlueprintBook({
     )
   )
   .addObject("./blueprints/deconstruction-ash.txt")
-  .addObject("./blueprints/malls/military-hub-2.txt")
+  .addObject("./blueprints/malls/military-hub-2.txt");
 
+util.standardizeStationNames(blueprintBook);
+
+blueprintBook.modifyAllDescriptions(description => `${ description ? description + "\n\n" : "" }${ new Date().toISOString().split("T")[0] } FJFF Blueprints compiled by Ashy.\nhttps://discord.gg/ehHEDDnPWA`); // Add new version tags
 export default blueprintBook;
