@@ -1,4 +1,4 @@
-import util from "./util.mjs";
+import strings from './util/strings.mjs';
 
 import fs from "fs/promises";
 import path from "path";
@@ -23,9 +23,9 @@ for (let file of await fs.readdir(path.join("src", bookDir))) {
   const blueprint = (await import("./" + path.join(bookDir, file))).default
     .modifyAllDescriptions(description => description ? description : "")
     .modifyAllDescriptions(description => description.replace(/\d{4}-\d{2}-\d{2} FJFF Common Blueprints compiled by i_cant.\nhttps:\/\/discord\.gg\/ehHEDDnPWA/g, "").trim()) // Remove old version tags
-    .modifyAllDescriptions(description => description.repalce(/\n{3,}/g, "\n\n")); // 3+ newlines -> 2
+    .modifyAllDescriptions(description => description.replace(/\n{3,}/g, "\n\n")); // 3+ newlines -> 2
   // Export to string, set copy var, save
-  const string = await util.encodeBlueprintString(blueprint.toObject());
+  const string = strings.encode(blueprint.toObject());
 
   if (!process.env.CI && file == copyBook) copyString = string;
   await fs.writeFile(path.join(outputDir, file.replace(/\.mjs$/g, '.txt')), string, "utf-8");

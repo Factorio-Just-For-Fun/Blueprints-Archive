@@ -1,8 +1,8 @@
 import clipboard from 'clipboardy';
-import util from '../util.mjs';
+import strings from '../util/strings.mjs';
 
 //
 // Run Program
 //
 
-console.dir(util.decodeBlueprintString(clipboard.readSync()), { depth: 5 });
+console.dir(strings.decode(clipboard.readSync()), { depth: 5 });

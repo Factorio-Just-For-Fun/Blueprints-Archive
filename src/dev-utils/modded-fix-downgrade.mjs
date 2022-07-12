@@ -1,5 +1,5 @@
 import clipboard from 'clipboardy';
-import util from '../util.mjs';
+import strings from '../util/strings.mjs';
 import { parseObject, Blueprint, BlueprintBook } from '../objects.mjs';
 
 // Note that this only works if the print's modules still exist
@@ -47,6 +47,6 @@ function downgradeModules(object) {
 // Run Program
 //
 
-const blueprint = parseObject(util.decodeBlueprintString(clipboard.readSync()));
+const blueprint = parseObject(util.decode(clipboard.readSync()));
 
-clipboard.writeSync(util.encodeBlueprintString(downgradeModules(blueprint).toObject()));
+clipboard.writeSync(util.encode(downgradeModules(blueprint).toObject()));

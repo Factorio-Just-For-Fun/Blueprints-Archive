@@ -1,5 +1,5 @@
 import fs from 'fs';
-import util from './util.mjs';
+import strings from './util/strings.mjs';
 
 class CustomObject {
   constructor() {}
@@ -190,7 +190,7 @@ function isObject(object) {
 function parseObject(object) {
   if (!object) throw new Error("Invalid Object (false-y) " + object);
 
-  if (typeof object === "string") return parseObject(util.decodeBlueprintString(fs.readFileSync(object, 'utf-8')));
+  if (typeof object === "string") return parseObject(strings.decode(fs.readFileSync(object, 'utf-8')));
   else if (object.blueprint) return new Blueprint(object);
   else if (object.blueprint_book) return new BlueprintBook(object);
   else if (object instanceof CustomObject) return object;

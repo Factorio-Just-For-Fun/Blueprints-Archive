@@ -1,6 +1,6 @@
 import fs from 'fs/promises';
 import path from 'path';
-import util from '../util.mjs';
+import strings from '../util/strings.mjs';
 
 //
 // CONFIG
@@ -20,7 +20,7 @@ for (let file of await fs.readdir(explodeDir, { withFileTypes: true })) {
   // Ignore directories
   if (file.isDirectory()) continue;
 
-  const object = util.decodeBlueprintString(await fs.readFile(path.join(explodeDir, file.name), 'utf-8'));
+  const object = strings.decode(await fs.readFile(path.join(explodeDir, file.name), 'utf-8'));
 
   // Ignore non-blueprint-books
   if (!object.blueprint_book) {
@@ -38,6 +38,6 @@ for (let file of await fs.readdir(explodeDir, { withFileTypes: true })) {
     delete blueprint.index;
 
     // Write file
-    await fs.writeFile(path.join(outputDir, blueprint.blueprint.label.replace(/[\\/]/g, "") + ".txt"), util.encodeBlueprintString(blueprint));
+    await fs.writeFile(path.join(outputDir, blueprint.blueprint.label.replace(/[\\/]/g, "") + ".txt"), strings.encode(blueprint));
   }
 }
