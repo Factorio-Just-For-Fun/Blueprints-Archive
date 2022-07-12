@@ -12,6 +12,9 @@ jobs:
       with:
         node-version: 16.x
         cache: 'npm'
+    - uses: szenius/set-timezone@v1.0
+      with:
+        timezoneLinux: "America/Anchorage"
     - run: npm ci
     - run: npm run build --if-present
     - uses: actions/upload-artifact@v3.1.0
