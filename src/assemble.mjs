@@ -23,7 +23,7 @@ for (let file of await fs.readdir(path.join("src", bookDir))) {
   const blueprint = (await import("./" + path.join(bookDir, file))).default
     .modifyAllDescriptions(description => description ? description : "")
     .modifyAllDescriptions(description => description.replace(/\d{4}-\d{2}-\d{2} FJFF Common Blueprints compiled by i_cant.\nhttps:\/\/discord\.gg\/ehHEDDnPWA/g, "").trim()) // Remove old version tags
-
+    .modifyAllDescriptions(description => description.repalce(/\n{3,}/g, "\n\n")); // 3+ newlines -> 2
   // Export to string, set copy var, save
   const string = await util.encodeBlueprintString(blueprint.toObject());
 
