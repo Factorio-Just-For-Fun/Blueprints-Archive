@@ -1,4 +1,3 @@
-import clipboard from 'clipboardy';
 import util from './util.mjs';
 import { parseObject, BlueprintBook } from './objects.mjs';
 
@@ -170,6 +169,10 @@ const blueprintBook = new BlueprintBook({
   .modifyAllDescriptions(description => `${ description ? description + "\n\n" : "" }${ new Date().toISOString().split('T')[0] } FJFF Blueprints compiled by Ashy.\nhttps://discord.gg/ehHEDDnPWA`); // Add new version tags
 
 const string = await util.encodeBlueprintString(blueprintBook.toObject());
-clipboard.writeSync(string);
+
+if (!process.env.CI) {
+  const clipboard = (await import('clipboardy')).default;
+  clipboard.writeSync(string);
+}
 
 await fs.writeFile("book.txt", string, "utf-8");
