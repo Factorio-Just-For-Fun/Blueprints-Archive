@@ -1,5 +1,5 @@
 import clipboard from 'clipboardy';
-import util from './util.mjs';
+import util from '../util.mjs';
 
 //
 // Run Program
