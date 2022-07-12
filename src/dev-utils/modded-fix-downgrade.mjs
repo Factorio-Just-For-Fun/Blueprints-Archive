@@ -47,6 +47,6 @@ function downgradeModules(object) {
 // Run Program
 //
 
-const blueprint = parseObject(util.decode(clipboard.readSync()));
+const blueprint = parseObject(strings.decode(clipboard.readSync()));
 
-clipboard.writeSync(util.encode(downgradeModules(blueprint).toObject()));
+clipboard.writeSync(strings.encode(downgradeModules(blueprint).toObject()));
