@@ -2,6 +2,8 @@ import clipboard from 'clipboardy';
 import util from './util.mjs';
 import { parseObject, BlueprintBook } from './objects.mjs';
 
+import fs from 'fs/promises';
+
 //
 // Start Progrma
 //
@@ -167,4 +169,7 @@ const blueprintBook = new BlueprintBook({
   .modifyAllDescriptions(description => description.replace(/\d{4}-\d{2}-\d{2} FJFF Common Blueprints compiled by i_cant.\nhttps:\/\/discord\.gg\/ehHEDDnPWA/g, '').trim()) // Remove old version tags
   .modifyAllDescriptions(description => `${ description ? description + "\n\n" : "" }${ new Date().toISOString().split('T')[0] } FJFF Blueprints compiled by Ashy.\nhttps://discord.gg/ehHEDDnPWA`); // Add new version tags
 
-clipboard.writeSync(await util.encodeBlueprintString(blueprintBook.toObject()));
+const string = await util.encodeBlueprintString(blueprintBook.toObject());
+clipboard.writeSync(string);
+
+await fs.writeFile("book.txt", string, "utf-8");
