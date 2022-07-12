@@ -1,6 +1,6 @@
 import fs from 'fs/promises';
 import path from 'path';
-import util from './util.mjs';
+import util from '../util.mjs';
 
 //
 // CONFIG
