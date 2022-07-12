@@ -156,5 +156,6 @@ const blueprintBook = new BlueprintBook({
 
 patching.standardizeStationNames(blueprintBook);
 
-blueprintBook.modifyAllDescriptions(description => `${ description ? description + "\n\n" : "" }${ new Date().toISOString().split("T")[0] } FJFF Blueprints compiled by Ashy.\nhttps://discord.gg/ehHEDDnPWA`); // Add new version tags
+const tag = !process.env.CI ? "Development Book" : "FJFF Blueprints compiled by Ashy.\nhttps://discord.gg/ehHEDDnPWA";
+blueprintBook.modifyAllDescriptions(description => `${ description ? description + "\n\n" : "" }${ new Date().toISOString().split("T")[0] } ${tag}`); // Add new version tags
 export default blueprintBook;
