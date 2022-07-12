@@ -5,7 +5,8 @@ import { parseObject, Blueprint, BlueprintBook } from '../objects.mjs';
 // This overwrites all modules, everywhere. This does not (currently) have a list of all assembler recipes
 // If something needs fixed with assemblers, let Ashy know, or write something and submit a PR.
 const configByType = {
-  'beacon': { 'speed-module-3': 2 }
+  'beacon': { 'speed-module-3': 2 },
+  'lab': { 'productivity-module-3': 2 }
 }
 
 const fullProdAssemb = { 'productivity-module-3': 4 }

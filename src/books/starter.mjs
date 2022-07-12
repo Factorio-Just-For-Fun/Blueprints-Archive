@@ -79,6 +79,10 @@ const blueprintBook = new BlueprintBook({
     .addObject("./blueprints/rail-designs-3-8/science/rocket-fuel-expensive-mskitty-belt.txt")
     .addObject("./blueprints/rail-designs-3-8/science/rocket-control-units-spzi.txt")
     .addObject("./blueprints/rail-designs-3-8/science/white-spzi.txt")
+    .addObject(undefined)
+    .addObject("./blueprints/rail-designs-3-8/science/labs-on-rails-spzi.txt")
+    .addObject("./blueprints/rail-designs-3-8/science/science-loader-spzi.txt")
+
     .modify(it => it.blueprints.filter(it => it instanceof Blueprint).forEach(generateLandfill))
     .modify(it => it.findBlueprint(5).blueprints.forEach(generateLandfill))
   )
