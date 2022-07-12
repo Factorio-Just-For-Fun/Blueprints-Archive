@@ -170,8 +170,6 @@ const blueprintBook = new BlueprintBook({
 
 const string = await util.encodeBlueprintString(blueprintBook.toObject());
 
-console.log(process.env.CI);
-console.log(!process.env.CI)
 if (!process.env.CI) {
   const clipboard = (await import('clipboardy')).default;
   clipboard.writeSync(string);
