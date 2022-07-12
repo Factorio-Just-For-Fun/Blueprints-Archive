@@ -80,6 +80,7 @@ const blueprintBook = new BlueprintBook({
     .addObject("./blueprints/rail-designs-3-8/science/rocket-control-units-spzi.txt")
     .addObject("./blueprints/rail-designs-3-8/science/white-spzi.txt")
     .modify(it => it.blueprints.filter(it => it instanceof Blueprint).forEach(generateLandfill))
+    .modify(it => it.findBlueprint(5).blueprints.forEach(generateLandfill))
   )
   .addObject(parseObject("./blueprints/pax.txt")
     .setContents("./blueprints/pax-depot-ash.txt", "PAX Train", 8) // 8 is the pax load without solars
