@@ -20,7 +20,7 @@ const ciBooks = [ copyBook ];
 await fs.mkdir(outputDir, { recursive: true });
 
 // CI only does CI books, not all
-if (program.env.CI) {
+if (process.env.CI) {
   for (let file of ciBooks) {
     // Load the blueprint and standardize
     const blueprint = (await import("./" + path.join(bookDir, file))).default
@@ -38,7 +38,7 @@ if (program.env.CI) {
     // Load the blueprint and standardize
     const blueprint = (await import("./" + path.join(bookDir, file))).default
       .modifyAllDescriptions(description => description ? description : "")
-      .modifyAllDescriptions(description => description.replace(/\d{4}-\d{2}-\d{2} FJFF DEVELOPMENT Blueprints compiled by i_cant.\nhttps:\/\/discord\.gg\/ehHEDDnPWA/g, "").trim()) // Remove old version tags
+      .modifyAllDescriptions(description => description.replace(/\d{4}-\d{2}-\d{2} FJFF DEVELOPMENT Blueprints./g, "").trim()) // Remove old version tags
       .modifyAllDescriptions(description => description.replace(/\n{3,}/g, "\n\n")); // 3+ newlines -> 2
     // Export to string, set copy var, save
     const string = strings.encode(blueprint.toObject());
