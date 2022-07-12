@@ -130,6 +130,7 @@ const blueprintBook = new BlueprintBook({
   .addObject("./blueprints/power/uranium-left-mskitty.txt")
   .addObject("./blueprints/power/uranium-processing-mskitty.txt")
   .addObject("./blueprints/power/reactor-5gw-mskitty.txt")
+  .addObject("./blueprints/power/reactor-2.4gw-ferront.txt")
   .addObject("./blueprints/power/starter-216.txt")
   .addObject(
     new BlueprintBook({
