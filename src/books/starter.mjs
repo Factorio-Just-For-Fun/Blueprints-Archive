@@ -111,8 +111,8 @@ const blueprintBook = new BlueprintBook({
       "./blueprints/belt/science/yellow-1kmin-expensive-mskitty.txt",
       "./blueprints/belt/intermediates/low-density-structure-4x4-500m-expensive-mskitty.txt",
       "./blueprints/belt/intermediates/low-density-structure-8x2-500m-expensive-mskitty.txt",
-      "./blueprints/belt/intermediates/rcu-360m-expensive-mskitty.txt",
-      "./blueprints/belt/intermediates/rocket-fuel-370m-expensive-mskitty.txt"
+      "./blueprints/belt/intermediates/rcu-744m-expensive-mskitty.txt",
+      "./blueprints/belt/intermediates/rocket-fuel-750m-expensive-mskitty.txt"
     )
   )
   .addObject("./blueprints/malls/hub-nilaus.txt")
