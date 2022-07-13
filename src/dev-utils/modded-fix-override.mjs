@@ -10,13 +10,17 @@ const configByType = {
 }
 
 const fullProdAssemb = { 'productivity-module-3': 4 }
-const fullProdChem = { 'productivity-module-3': 4 }
+const fullSpeedAssemb = { 'speed-module-3': 4 }
+const fullProdChem = { 'productivity-module-3': 3 }
 const configByRecipe = {
   'advanced-oil-processing': fullProdChem,
   'heavy-oil-cracking': fullProdChem,
+  'explosives': fullProdChem,
   'solid-fuel-from-light-oil': fullProdAssemb,
   'solid-fuel-from-petroleum-gas': fullProdAssemb,
   'rocket-fuel': fullProdAssemb,
+  'rocket': fullSpeedAssemb,
+  'explosive-rocket': fullSpeedAssemb,
 }
 
 
@@ -24,13 +28,22 @@ const configByRecipe = {
 // Fix print
 //
 
+const unlisted = new Set();
+
 function downgradeModules(object) {
   if (object instanceof BlueprintBook) {
     blueprintBook.blueprints.forEach(downgradeModules);
   } else if (object instanceof Blueprint) {
     object.entities.forEach(it => {
       if (it.name && configByType[it.name]) it.items = configByType[it.name];
-      if (it.recipe && configByRecipe[it.recipe]) it.items = configByRecipe[it.recipe];
+      else if (it.recipe) {
+        if (configByRecipe[it.recipe]) it.items = configByRecipe[it.recipe];
+        else {
+          if (it.recipe in unlisted) return;
+          unlisted.add(it.recipe);
+          console.log(`Recipe not found: ${ it.recipe }`);
+        }
+      }
     });
   }
 
