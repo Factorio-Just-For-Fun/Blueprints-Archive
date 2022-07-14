@@ -155,7 +155,7 @@ const blueprintBook = new BlueprintBook({
     }).setContents(
       "./blueprints/rail-designs-3-8/modules/modules-from-raw-spzi-base.txt",
       "./blueprints/rail-designs-3-8/modules/modules-from-raw-spzi-extension.txt",
-      "./blueprints/rail-designs-3-8/modules/modules-on-rails-spzi.txt"
+      "./blueprints/rail-designs-3-8/modules/modules-on-rails-mainbase-spzi.txt"
     ).modify(it => it.blueprints.forEach(generateLandfill))
   )
   .addObject("./blueprints/deconstruction-ash.txt")
