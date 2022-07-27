@@ -161,6 +161,14 @@ const size = {
     "flamethrower-turret": {
         "x": 2,
         "y": 3
+    },
+    "curved-rail": {
+        "x": 5,
+        "y": 7
+    },
+    "rail": {
+        "x": 2,
+        "y": 2
     }
 };
 
