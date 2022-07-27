@@ -138,7 +138,7 @@ class BlueprintBook extends CustomObject {
   setContents(...selectors) {
     const newContents = [];
     for (let index in selectors) {
-      if (!selectors[index]) continue;
+      if (!selectors[index] && selectors[index] !== 0) continue;
 
       const selector = selectors[index];
       if (isObject(selector)) { // Test for valid blueprint object
