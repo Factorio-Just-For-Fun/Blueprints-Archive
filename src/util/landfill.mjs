@@ -7,7 +7,7 @@ function generateLandfill(blueprint) {
 
   for (let entity of blueprint.entities) {
     // offshore pumps are built on water, so don't create landfill for them
-    if (entity.name === 'offshore_pump') return;
+    if (entity.name == 'offshore-pump') continue;
 
     let position = {
       x: entity.position.x,
