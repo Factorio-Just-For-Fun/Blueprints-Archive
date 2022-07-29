@@ -110,8 +110,9 @@ class BlueprintBook extends CustomObject {
     for (let object of this.blueprints) {
       if (object instanceof Blueprint) consumer(object);
       else if (object instanceof BlueprintBook) object.forEachBlueprint(consumer);
-
     }
+
+    return this;
   }
 
   // Modify descriptions and returns this.
