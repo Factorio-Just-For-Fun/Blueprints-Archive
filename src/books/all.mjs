@@ -37,6 +37,20 @@ async function loadDirectory(relativePath) {
     }
   }
 
+  // Load All Sub-books
+  let otherBooks = new BlueprintBook({
+    blueprint_book: {
+      item: "blueprint_book",
+      label: "./generated",
+      blueprints: []
+    }
+  });
+
+  for (let file of await fs.readdir('./src/books/')) {
+    if (file === "all.mjs") continue;
+    otherBooks.blueprints.push(await import(`./${file}`));
+  }
+
   // Sort alphabetically
   return output.sort((a, b) => {
     if (prioritizeDirectories) {

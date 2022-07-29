@@ -105,6 +105,15 @@ class BlueprintBook extends CustomObject {
     return this;
   }
 
+  // Call on all blueprints and sub-Blueprints
+  forEachBlueprint(consumer) {
+    for (let object of this.blueprints) {
+      if (object instanceof Blueprint) consumer(object);
+      else if (object instanceof BlueprintBook) object.forEachBlueprint(consumer);
+
+    }
+  }
+
   // Modify descriptions and returns this.
   modifyAllDescriptions(consumer) {
     this.description = consumer(this.description);

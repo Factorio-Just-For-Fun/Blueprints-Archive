@@ -29,7 +29,9 @@ const blueprintBook = new BlueprintBook({
   .addObject("./blueprints/do-not-take-these-ash.txt")
 
   .addObject("./blueprints/balancers-raynquist.txt")
-  .addObject("./blueprints/rail-grids-3-8/3-8-rail-network-spzi.txt")
+  .addObject(parseObject("./blueprints/rail-grids-3-8/3-8-rail-network-spzi.txt").modify(it =>
+    it.findBlueprint("3-8 Stations").forEachBlueprint(generateLandfill)
+  ))
   .addObject("./blueprints/wallmoeba-spzi.txt")
   .addObject(
     new BlueprintBook({
@@ -90,8 +92,8 @@ const blueprintBook = new BlueprintBook({
     .addObject("./blueprints/rail-designs-3-8/science/labs-on-rails-spzi.txt")
     .addObject("./blueprints/rail-designs-3-8/science/science-loader-spzi.txt")
 
-    .modify(it => it.blueprints.filter(it => it instanceof Blueprint).forEach(generateLandfill))
-    .modify(it => it.findBlueprint(5).blueprints.forEach(generateLandfill))
+    .modify(it => it.forEachBlueprint(generateLandfill))
+    .modify(it => it.findBlueprint(5).forEachBlueprint(generateLandfill))
   )
   .addObject(parseObject("./blueprints/pax.txt")
     .setContents("./blueprints/pax-depot-ash.txt", "PAX Train", 8) // 8 is the pax load without solars
@@ -163,7 +165,7 @@ const blueprintBook = new BlueprintBook({
       "./blueprints/rail-designs-3-8/modules/modules-from-raw-spzi-base.txt",
       "./blueprints/rail-designs-3-8/modules/modules-from-raw-spzi-extension.txt",
       "./blueprints/rail-designs-3-8/modules/modules-on-rails-mainbase-spzi.txt"
-    ).modify(it => it.blueprints.forEach(generateLandfill))
+    ).forEachBlueprint(generateLandfill)
   )
   .addObject("./blueprints/deconstruction-ash.txt")
   .addObject("./blueprints/malls/military-hub-2.txt");
