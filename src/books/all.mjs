@@ -37,20 +37,6 @@ async function loadDirectory(relativePath) {
     }
   }
 
-  // Load All Sub-books
-  let otherBooks = new BlueprintBook({
-    blueprint_book: {
-      item: "blueprint_book",
-      label: "./generated",
-      blueprints: []
-    }
-  });
-
-  for (let file of await fs.readdir('./src/books/')) {
-    if (file === "all.mjs") continue;
-    otherBooks.blueprints.push(await import(`./${file}`));
-  }
-
   // Sort alphabetically
   return output.sort((a, b) => {
     if (prioritizeDirectories) {
@@ -84,6 +70,7 @@ const blueprintBook = new BlueprintBook({
 });
 
 blueprintBook.setContents(...await loadDirectory(""));
+
 patching.standardizeStationNames(blueprintBook);
 
 blueprintBook.modifyAllDescriptions(description => `${ description ? description + "\n\n" : "" }${ new Date().toISOString().split("T")[0] } Ashy's Private Book.`); // Add new version tags;
