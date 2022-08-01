@@ -170,6 +170,7 @@ const blueprintBook = new BlueprintBook({
     ).forEachBlueprint(generateLandfill)
   )
   .addObject("./blueprints/deconstruction-ash.txt")
+  .addObject("./blueprints/module-upgrader-pixelcort.txt")
   .addObject("./blueprints/malls/military-hub-2.txt");
 
 patching.standardizeStationNames(blueprintBook);
