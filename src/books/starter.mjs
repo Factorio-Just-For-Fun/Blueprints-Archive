@@ -51,11 +51,13 @@ const blueprintBook = new BlueprintBook({
     })
     .addObject(
       parseObject("./blueprints/rail-designs-3-8/smelting/clocked-spzi.txt")
+      /*
       .setContents(
         0, 1, undefined, undefined, undefined, undefined,
         6, 7, undefined, undefined, undefined, undefined,
         ...(parseObject("./blueprints/rail-designs-3-8/smelting/clocked-steel-spzi.txt").explode().blueprints)
       )
+      */
     )
     .addObject(undefined)
     .addObject("./blueprints/rail-designs-3-8/intermediates/green-chips-spzi.txt")
