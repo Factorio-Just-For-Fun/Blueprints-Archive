@@ -163,8 +163,8 @@ const size = {
         "y": 3
     },
     "curved-rail": {
-        "x": 5,
-        "y": 7
+        "x": 6,
+        "y": 8
     },
     "rail": {
         "x": 2,
