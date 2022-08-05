@@ -28,7 +28,7 @@ const blueprintBook = new BlueprintBook({
   .addObject("./blueprints/do-not-take-these-ash.txt")
 
   .addObject("./blueprints/balancers-raynquist.txt")
-  .addObject(parseObject("./blueprints/rail-grids-3-8/3-8-rail-network-spzi.txt")
+  .addObject("./blueprints/rail-grids-3-8/3-8-rail-network-spzi.txt")
   .addObject("./blueprints/rail-misc/wallmoeba-spzi.txt")
   .addObject(
     new BlueprintBook({
