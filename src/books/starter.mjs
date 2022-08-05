@@ -1,6 +1,5 @@
 import { parseObject, BlueprintBook, Blueprint } from '../objects.mjs';
 import patching from '../util/patching.mjs';
-import generateLandfill from '../util/landfill.mjs';
 
 //
 // Start Program
@@ -29,9 +28,7 @@ const blueprintBook = new BlueprintBook({
   .addObject("./blueprints/do-not-take-these-ash.txt")
 
   .addObject("./blueprints/balancers-raynquist.txt")
-  .addObject(parseObject("./blueprints/rail-grids-3-8/3-8-rail-network-spzi.txt").modify(it =>
-    it.findBlueprint("3-8 Stations").forEachBlueprint(generateLandfill)
-  ))
+  .addObject(parseObject("./blueprints/rail-grids-3-8/3-8-rail-network-spzi.txt")
   .addObject("./blueprints/wallmoeba-spzi.txt")
   .addObject(
     new BlueprintBook({
@@ -93,9 +90,6 @@ const blueprintBook = new BlueprintBook({
     .addObject(undefined)
     .addObject("./blueprints/rail-designs-3-8/science/labs-on-rails-spzi.txt")
     .addObject("./blueprints/rail-designs-3-8/science/science-loader-spzi.txt")
-
-    .modify(it => it.forEachBlueprint(generateLandfill))
-    .modify(it => it.findBlueprint(5).forEachBlueprint(generateLandfill))
   )
   .addObject(parseObject("./blueprints/pax.txt")
     .setContents("./blueprints/pax-depot-ash.txt", "PAX Train", 8) // 8 is the pax load without solars
@@ -167,7 +161,7 @@ const blueprintBook = new BlueprintBook({
       "./blueprints/rail-designs-3-8/modules/modules-from-raw-spzi-base.txt",
       "./blueprints/rail-designs-3-8/modules/modules-from-raw-spzi-extension.txt",
       "./blueprints/rail-designs-3-8/modules/modules-on-rails-mainbase-spzi.txt"
-    ).forEachBlueprint(generateLandfill)
+    )
   )
   .addObject("./blueprints/deconstruction-ash.txt")
   .addObject("./blueprints/module-upgrader-pixelcort.txt")
