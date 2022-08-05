@@ -29,7 +29,7 @@ const blueprintBook = new BlueprintBook({
 
   .addObject("./blueprints/balancers-raynquist.txt")
   .addObject(parseObject("./blueprints/rail-grids-3-8/3-8-rail-network-spzi.txt")
-  .addObject("./blueprints/wallmoeba-spzi.txt")
+  .addObject("./blueprints/rail-misc/wallmoeba-spzi.txt")
   .addObject(
     new BlueprintBook({
       blueprint_book: {
@@ -56,11 +56,11 @@ const blueprintBook = new BlueprintBook({
       )
       */
     )
-    .addObject(undefined)
     .addObject("./blueprints/rail-designs-3-8/intermediates/green-chips-spzi.txt")
     .addObject("./blueprints/rail-designs-3-8/intermediates/red-chips-spzi.txt")
-    .addObject("./blueprints/rail-designs-3-8/intermediates/blue-chips-spzi.txt")
-    .addObject("./blueprints/rail-designs-3-8/intermediates/plastic-petrol-coal-liq-mskitty.txt")
+    .addObject("./blueprints/rail-designs-3-8/intermediates/blue-chips-mskitty.txt")
+    .addObject("./blueprints/rail-designs-3-8/intermediates/petroleum-advanced-mskitty.txt")
+    .addObject("./blueprints/rail-designs-3-8/intermediates/plastic-advanced-mskitty.txt")
 
     .addObject("./blueprints/rail-designs-3-8/science/red-mskitty.txt")
     .addObject("./blueprints/rail-designs-3-8/science/green-mskitty.txt")
@@ -85,14 +85,14 @@ const blueprintBook = new BlueprintBook({
     .addObject("./blueprints/rail-designs-3-8/science/low-density-structures-spzi.txt")
 
     .addObject("./blueprints/rail-designs-3-8/science/rocket-fuel-expensive-mskitty-belt.txt")
-    .addObject("./blueprints/rail-designs-3-8/science/rocket-control-units-spzi.txt")
+    .addObject("./blueprints/rail-designs-3-8/science/rocket-control-units-mskitty.txt")
+    .addObject("./blueprints/rail-designs-3-8/science/speed-mod-mskitty.txt")
     .addObject("./blueprints/rail-designs-3-8/science/white-spzi.txt")
-    .addObject(undefined)
     .addObject("./blueprints/rail-designs-3-8/science/labs-on-rails-spzi.txt")
     .addObject("./blueprints/rail-designs-3-8/science/science-loader-spzi.txt")
   )
-  .addObject(parseObject("./blueprints/pax.txt")
-    .setContents("./blueprints/pax-depot-ash.txt", "PAX Train", 8) // 8 is the pax load without solars
+  .addObject(parseObject("./blueprints/rail-misc/pax.txt")
+    .setContents("./blueprints/rail-misc/pax-depot-ash.txt", "PAX Train", 8) // 8 is the pax load without solars
   )
   .addObject("./blueprints/bus-layout-expensive.txt")
   .addObject(
@@ -122,7 +122,7 @@ const blueprintBook = new BlueprintBook({
   )
   .addObject("./blueprints/malls/hub-nilaus.txt")
   .addObject("./blueprints/malls/armor-equipment-elderaxe.txt")
-  .addObject("./blueprints/construction-outpost-spzi.txt")
+  .addObject("./blueprints/rail-misc/construction-outpost-spzi.txt")
   .addObject(parseObject("./blueprints/power/solar-mskitty.txt")
     .setContents("Solar 87% Ratio mskitty", "1-1 Solar Load mskitty", "Solar Drop mskitty")
     .explode()
