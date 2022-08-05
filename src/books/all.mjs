@@ -32,6 +32,7 @@ async function loadDirectory(relativePath) {
       // Name the bp the file name if none exists
       const blueprint = parseObject(path.join(sourceDir, relativePath, file.name));
       if (!blueprint.label) blueprint.label = file.name;
+      else blueprint.label = file.name + ": " + blueprint.label;
 
       output.push(blueprint);
     }
