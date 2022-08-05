@@ -85,7 +85,7 @@ const blueprintBook = new BlueprintBook({
     .addObject("./blueprints/rail-designs-3-8/science/batteries-expensive-mskitty.txt")
     .addObject("./blueprints/rail-designs-3-8/science/flying-frame-expensive-mskitty.txt")
     .addObject("./blueprints/rail-designs-3-8/science/electic-engines-expensive-mskitty.txt")
-    .addObject("./blueprints/rail-designs-3-8/science/low-density-structure-expensive-mskitty.txt")
+    .addObject("./blueprints/rail-designs-3-8/science/low-density-structures-spzi.txt")
 
     .addObject("./blueprints/rail-designs-3-8/science/rocket-fuel-expensive-mskitty-belt.txt")
     .addObject("./blueprints/rail-designs-3-8/science/rocket-control-units-spzi.txt")
