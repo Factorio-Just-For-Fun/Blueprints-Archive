@@ -29,7 +29,7 @@ const blueprintBook = new BlueprintBook({
 
   .addObject("./blueprints/balancers-raynquist.txt")
   .addObject("./blueprints/rail-grids-3-8/3-8-rail-network-spzi.txt")
-  .addObject("./blueprints/rail-misc/wallmoeba-spzi.txt")
+  .addObject("./blueprints/rail-misc/wallmoeba-mini-ashy.txt")
   .addObject(
     new BlueprintBook({
       blueprint_book: {
@@ -120,25 +120,18 @@ const blueprintBook = new BlueprintBook({
       "./blueprints/belt/intermediates/rocket-fuel-750m-expensive-mskitty.txt"
     )
   )
-  .addObject("./blueprints/malls/hub-nilaus.txt")
-  .addObject("./blueprints/malls/armor-equipment-elderaxe.txt")
+  .addObject("./blueprints/malls/mall-kos.txt")
   .addObject("./blueprints/rail-misc/construction-outpost-spzi.txt")
   .addObject(parseObject("./blueprints/power/solar-mskitty.txt")
     .setContents("Solar 87% Ratio mskitty", "1-1 Solar Load mskitty", "Solar Drop mskitty")
     .explode()
   )
-  .addObject("./blueprints/malls/coma-spzi.txt")
   .addObject("./blueprints/belt/intermediates/green-chips-expensive-drsupergood.txt")
   .addObject("./blueprints/belt/intermediates/red-chips-expensive-drsupergood.txt")
   .addObject("./blueprints/smelting/kos-ash.txt")
-  .addObject(parseObject("./blueprints/decorative/tiles/generic.txt")
-    .findBlueprint("Hexagon")
-    .modify(it => it["absolute-snapping"] = true)
-    .modify(it => it["snap-to-grid"] = { x: 32, y: 36 })
-    .modify(it => it["position-relative-to-grid"] = { x: 1, y: 2 })
-  )
+  .addObject("./blueprints/decorative/tiles/hexagon-gold-trimmed.txt")
   .addObject("./blueprints/power/uranium-left-mskitty.txt")
-  .addObject("./blueprints/power/uranium-processing-mskitty.txt")
+  .addObject("./blueprints/power/uranium-processing-mskitty-updated-ratio-madkatz.txt")
   .addObject("./blueprints/power/reactor-5gw-mskitty.txt")
   .addObject("./blueprints/power/reactor-2.4gw-ferront.txt")
   .addObject("./blueprints/power/starter-216.txt")
@@ -160,7 +153,8 @@ const blueprintBook = new BlueprintBook({
     }).setContents(
       "./blueprints/rail-designs-3-8/modules/modules-from-raw-spzi-base.txt",
       "./blueprints/rail-designs-3-8/modules/modules-from-raw-spzi-extension.txt",
-      "./blueprints/rail-designs-3-8/modules/modules-on-rails-mainbase-spzi.txt"
+      "./blueprints/rail-designs-3-8/modules/modules-on-rails-mainbase-spzi.txt",
+      parseObject("./blueprints/malls/modules.txt").findBlueprint(7)
     )
   )
   .addObject("./blueprints/deconstruction-ash.txt")
