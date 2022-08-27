@@ -131,7 +131,7 @@ const blueprintBook = new BlueprintBook({
   .addObject("./blueprints/belt/intermediates/green-chips-expensive-drsupergood.txt")
   .addObject("./blueprints/belt/intermediates/red-chips-expensive-drsupergood.txt")
   .addObject("./blueprints/smelting/kos-ash.txt")
-  .addObject(parseObject("./blueprints/tileset.txt")
+  .addObject(parseObject("./blueprints/decorative/tiles/generic.txt")
     .findBlueprint("Hexagon")
     .modify(it => it["absolute-snapping"] = true)
     .modify(it => it["snap-to-grid"] = { x: 32, y: 36 })
