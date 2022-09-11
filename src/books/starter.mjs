@@ -29,7 +29,11 @@ const blueprintBook = new BlueprintBook({
 
   .addObject("./blueprints/balancers-raynquist.txt")
   .addObject("./blueprints/rail-grids-3-8/3-8-rail-network-spzi.txt")
-  .addObject("./blueprints/biters/wallmoeba-mini-ashy.txt")
+  .addObject(
+    parseObject("./blueprints/biters/wallmoeba-mini-ashy.txt")
+    .addObject("./blueprints/biters/wallmoeba-segment-only.txt")
+    .addObject("./blueprints/malls/military-hub-2.txt")
+  )
   .addObject(
     new BlueprintBook({
       blueprint_book: {
@@ -158,8 +162,7 @@ const blueprintBook = new BlueprintBook({
     )
   )
   .addObject("./blueprints/deconstruction-ash.txt")
-  .addObject("./blueprints/module-upgrader-pixelcort.txt")
-  .addObject("./blueprints/malls/military-hub-2.txt");
+  .addObject("./blueprints/module-upgrader-pixelcort.txt");
 
 patching.standardizeStationNames(blueprintBook);
 
