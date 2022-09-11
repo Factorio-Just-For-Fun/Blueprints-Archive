@@ -29,7 +29,7 @@ const blueprintBook = new BlueprintBook({
 
   .addObject("./blueprints/balancers-raynquist.txt")
   .addObject("./blueprints/rail-grids-3-8/3-8-rail-network-spzi.txt")
-  .addObject("./blueprints/rail-misc/wallmoeba-mini-ashy.txt")
+  .addObject("./blueprints/biters/wallmoeba-mini-ashy.txt")
   .addObject(
     new BlueprintBook({
       blueprint_book: {
