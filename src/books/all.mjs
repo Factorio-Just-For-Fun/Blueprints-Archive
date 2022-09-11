@@ -63,7 +63,7 @@ const blueprintBook = new BlueprintBook({
       { signal: { type: "virtual", name: "signal-H" }, index: 3 },
       { signal: { type: "virtual", name: "signal-Y" }, index: 4 }
     ],
-    description: "All blueprints in the repository. Compiled by Ashy, though not vetted for quality. Do not post in game blueprints." + (process.env.GITHUB_SHA ? '\nCommit: #' + process.env.GITHUB_SHA.substring(0, 7) : ''),
+    description: "All blueprints in the repository. Compiled by Ashy314, though not vetted for quality. Do not post in game blueprints." + (process.env.GITHUB_SHA ? '\nCommit: #' + process.env.GITHUB_SHA.substring(0, 7) : ''),
     blueprints: [],
     active_index: 0,
     version: 281479275675648
