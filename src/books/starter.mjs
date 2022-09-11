@@ -118,10 +118,9 @@ const blueprintBook = new BlueprintBook({
       "./blueprints/belt/science/gray-1kmin-expensive-mskitty.txt",
       "./blueprints/belt/science/purple-1kmin-expensive-mskitty.txt",
       "./blueprints/belt/science/yellow-1kmin-expensive-mskitty.txt",
-      "./blueprints/belt/intermediates/low-density-structure-4x4-500m-expensive-mskitty.txt",
-      "./blueprints/belt/intermediates/low-density-structure-8x2-500m-expensive-mskitty.txt",
-      "./blueprints/belt/intermediates/rcu-744m-expensive-mskitty.txt",
-      "./blueprints/belt/intermediates/rocket-fuel-750m-expensive-mskitty.txt"
+      "./blueprints/belt/intermediates/low-density-structure-fixed-337-expensive-mskitty.txt",
+      "./blueprints/belt/intermediates/rcu-744-fixed-expensive-mskitty.txt",
+      "./blueprints/belt/intermediates/rocket-fuel-740m-fixed-expensive-mskitty.txt"
     )
   )
   .addObject("./blueprints/malls/mall-kos.txt")
@@ -129,14 +128,16 @@ const blueprintBook = new BlueprintBook({
   .addObject(parseObject("./blueprints/power/solar-mskitty.txt")
     .setContents("Solar 87% Ratio mskitty", "1-1 Solar Load mskitty", "Solar Drop mskitty")
     .explode()
+    .addObject("./blueprints/belt/intermediates/batteries-mskitty.txt")
+    .addObject("./blueprints/malls/solar/solar-mskitty.txt")
+    .addObject("./blueprints/malls/solar/accumulator-mskitty.txt")
   )
   .addObject("./blueprints/belt/intermediates/green-chips-expensive-drsupergood.txt")
-  .addObject("./blueprints/belt/intermediates/red-chips-expensive-drsupergood.txt")
+  .addObject("./blueprints/belt/intermediates/red-chips-kerza.txt")
   .addObject("./blueprints/smelting/kos-ash.txt")
   .addObject("./blueprints/decorative/tiles/hexagon-gold-trimmed.txt")
   .addObject("./blueprints/power/uranium-left-mskitty.txt")
   .addObject("./blueprints/power/uranium-processing-mskitty-updated-ratio-madkatz.txt")
-  .addObject("./blueprints/power/reactor-5gw-mskitty.txt")
   .addObject("./blueprints/power/reactor-2.4gw-ferront.txt")
   .addObject("./blueprints/power/starter-216.txt")
   .addObject(
