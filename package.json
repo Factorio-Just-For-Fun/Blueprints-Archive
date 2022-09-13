@@ -7,6 +7,7 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "node src/assemble.mjs"
   },
+  "type": "module",
   "author": "Ashy314",
   "license": "ISC",
   "dependencies": {
