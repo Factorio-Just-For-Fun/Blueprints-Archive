@@ -32,6 +32,7 @@ const blueprintBook = new BlueprintBook({
   .addObject(
     parseObject("./blueprints/biters/wallmoeba-mini-ashy.txt")
     .addObject("./blueprints/biters/wallmoeba-segment-only.txt")
+    .addObject("./blueprints/biters/wallmoeba-segment-no-lasers.txt")
     .addObject("./blueprints/malls/military-hub-2.txt")
   )
   .addObject(
@@ -123,7 +124,7 @@ const blueprintBook = new BlueprintBook({
       "./blueprints/belt/intermediates/rocket-fuel-740m-fixed-expensive-mskitty.txt"
     )
   )
-  .addObject("./blueprints/malls/mall-kos.txt")
+  .addObject("./blueprints/malls/kos-kerza-updated.txt")
   .addObject("./blueprints/rail-misc/construction-outpost-spzi.txt")
   .addObject(parseObject("./blueprints/power/solar-mskitty.txt")
     .setContents("Solar 87% Ratio mskitty", "1-1 Solar Load mskitty", "Solar Drop mskitty")
