@@ -117,7 +117,7 @@ const blueprintBook = new BlueprintBook({
       "./blueprints/belt/science/green-1kmin-expensive-mskitty.txt",
       "./blueprints/belt/science/blue-1kmin-expensive-mskitty.txt",
       "./blueprints/belt/science/gray-1kmin-expensive-mskitty.txt",
-      "./blueprints/belt/science/purple-1kmin-expensive-mskitty.txt",
+      "./blueprints/belt/science/purple-1kmin-red-expensive-mskitty.txt",
       "./blueprints/belt/science/yellow-1kmin-expensive-mskitty.txt",
       "./blueprints/belt/intermediates/low-density-structure-fixed-337-expensive-mskitty.txt",
       "./blueprints/belt/intermediates/rcu-744-fixed-expensive-mskitty.txt",
