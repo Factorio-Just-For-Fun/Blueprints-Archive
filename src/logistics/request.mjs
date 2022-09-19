@@ -113,7 +113,7 @@ class LogisticsRequests {
 import { fileURLToPath } from "url";
 
 if (process.argv[1] == fileURLToPath(import.meta.url)) {
-  clipboard.writeSync(strings.encode(new LogisticsRequests().toBlueprint().toObject()));
+  clipboard.writeSync(strings.encode(new LogisticsRequests().toBlueprint(true).toObject()));
 }
 
 export default LogisticsRequests;
