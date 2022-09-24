@@ -129,6 +129,8 @@ const blueprintBook = new BlueprintBook({
   .addObject(parseObject("./blueprints/power/solar-mskitty.txt")
     .setContents("Solar 87% Ratio mskitty", "1-1 Solar Load mskitty", "Solar Drop mskitty")
     .explode()
+    .addObject("./blueprints/belt/intermediates/sulfur-full-belt-mskitty.txt")
+    .addObject("./blueprints/belt/intermediates/sulfuric-acid-mskitty.txt")
     .addObject("./blueprints/belt/intermediates/batteries-mskitty.txt")
     .addObject("./blueprints/malls/solar/solar-mskitty.txt")
     .addObject("./blueprints/malls/solar/accumulator-mskitty.txt")
