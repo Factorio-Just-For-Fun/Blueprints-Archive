@@ -52,7 +52,7 @@ const blueprintBook = new BlueprintBook({
       }
     })
     .addObject(
-      parseObject("./blueprints/rail-designs-3-8/smelting/clocked-spzi.txt")
+      parseObject("./blueprints/rail-designs-3-8/smelting/clocked-spzi-kerza.txt")
       /*
       .setContents(
         0, 1, undefined, undefined, undefined, undefined,
@@ -61,7 +61,11 @@ const blueprintBook = new BlueprintBook({
       )
       */
     )
-    .addObject("./blueprints/rail-designs-3-8/intermediates/green-chips-spzi.txt")
+    .addObject(
+      parseObject("./blueprints/rail-designs-3-8/intermediates/green-chips-spzi.txt")
+      .addObject("./blueprints/rail-designs-3-8/intermediates/green-chips-no-beacon-kerza.txt")
+      .explode()
+    )
     .addObject("./blueprints/rail-designs-3-8/intermediates/red-chips-spzi.txt")
     .addObject("./blueprints/rail-designs-3-8/intermediates/blue-chips-mskitty.txt")
     .addObject("./blueprints/rail-designs-3-8/intermediates/petroleum-advanced-mskitty.txt")
