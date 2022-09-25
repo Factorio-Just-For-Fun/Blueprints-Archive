@@ -201,8 +201,10 @@ function parseObject(object) {
   if (!object) throw new Error("Invalid Object (false-y) " + object);
 
   try {
-    if (typeof object === "string") return parseObject(strings.decode(fs.readFileSync(object, 'utf-8')));
-    else if (object.blueprint) return new Blueprint(object);
+    if (typeof object === "string") {
+      console.log("Loading " + object + " ... ");
+      return parseObject(strings.decode(fs.readFileSync(object, 'utf-8')));
+    } else if (object.blueprint) return new Blueprint(object);
     else if (object.blueprint_book) return new BlueprintBook(object);
     else if (object instanceof CustomObject) return object;
     else if (object.upgrade_planner || object.deconstruction_planner) return object;
