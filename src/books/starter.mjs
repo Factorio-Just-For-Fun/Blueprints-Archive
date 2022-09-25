@@ -31,8 +31,8 @@ const blueprintBook = new BlueprintBook({
   .addObject("./blueprints/rail-grids-3-8/3-8-rail-network-spzi.txt")
   .addObject(
     parseObject("./blueprints/biters/wallmoeba-mini-ashy.txt")
-    .addObject("./blueprints/biters/wallmoeba-segment-only.txt")
-    .addObject("./blueprints/biters/wallmoeba-segment-no-lasers.txt")
+    .addObject("./blueprints/biters/wallmoeba-segment-only-back-roboport.txt")
+    .addObject("./blueprints/biters/wallmoeba-segment-no-lasers-back-roboport.txt")
     .addObject("./blueprints/malls/military-hub-2.txt")
   )
   .addObject(
