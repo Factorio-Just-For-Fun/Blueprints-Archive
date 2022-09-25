@@ -11,3 +11,16 @@ function standardizeStationNames(book) {
 export default {
   standardizeStationNames
 }
+
+//
+// Run Program
+//
+import { fileURLToPath } from "url";
+import clipboard from 'clipboardy';
+import strings from './strings.mjs';
+import { parseObject, Blueprint, BlueprintBook } from '../objects.mjs';
+
+if (process.argv[1] == fileURLToPath(import.meta.url)) {
+  const blueprint = parseObject(strings.decode(clipboard.readSync()));
+  clipboard.writeSync(strings.encode(standardizeStationNames(blueprint).toObject()));
+}
