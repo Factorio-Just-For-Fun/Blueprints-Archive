@@ -4,6 +4,9 @@ function standardizeStationNames(book) {
     .modifyAllStationNames(name => name.replace(/(\s\*)+$/g, "")) // Remove stars
     .modifyAllStationNames(name => name.replace(/3\-8/g, "")) // Remove 3-8 indicators
     .modifyAllStationNames(name => name.replace(/\[img=(item|fluid).([\w\-]+)\]/g, "[$1=$2]")) // Fix [img=item/fluid.name] with [item/fluid=name]
+    .modifyAllStationNames(name => name.replace(/^\[(U|L)\]\s\[/, "[$1][")) // Remove space between [U/L] and a tag
+    .modifyAllStationNames(name => name.replace(/^\[(U|L)\](\w)/, "[$1] $2")) // Add space between [U/L] and a word
+    .modifyAllStationNames(name => name.replace(/\s+/, ' ')) // Replace multiple spaces with 1
     .modifyAllStationNames(name => (name == "" || name == "[U]") ? "☭ Communism" : name) // Replace unnamed stations with Communism
     .modifyAllStationNames(name => name.trim()); // Trim all station names
 }
