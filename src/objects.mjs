@@ -207,7 +207,7 @@ function parseObject(object) {
     else if (object instanceof CustomObject) return object;
     else if (object.upgrade_planner || object.deconstruction_planner) return object;
   } catch (e) {
-    throw new Error("Error while parsing object " + object, e);
+    throw new Error("Error while parsing object: " + object + "\n\n" + e.message + "\n" + e.stack);
   }
   throw new Error("Invalid Object " + object);
 }
