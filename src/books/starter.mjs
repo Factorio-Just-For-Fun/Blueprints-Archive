@@ -143,7 +143,6 @@ const blueprintBook = new BlueprintBook({
   .addObject("./blueprints/belt/intermediates/red-chips-kerza.txt")
   .addObject("./blueprints/smelting/kos-ash.txt")
   .addObject("./blueprints/decorative/tiles/hexagon-gold-trimmed.txt")
-  .addObject("./blueprints/power/uranium-left-mskitty.txt")
   .addObject("./blueprints/power/uranium-processing-mskitty-updated-ratio-madkatz.txt")
   .addObject("./blueprints/power/reactor-2.4gw-ferront.txt")
   .addObject("./blueprints/power/starter-216.txt")
