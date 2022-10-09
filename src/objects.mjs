@@ -92,7 +92,7 @@ class BlueprintBook extends CustomObject {
 
   // Adds an object to the blueprint book and returns this
   addObject() {
-    arguments.forEach(object => this.blueprints.push(object === undefined ? undefined : parseObject(object)));
+    Object.values(arguments).forEach(object => this.blueprints.push(object === undefined ? undefined : parseObject(object)));
     return this;
   }
 
@@ -202,7 +202,6 @@ function parseObject(object) {
 
   try {
     if (typeof object === "string") {
-      console.log("Loading " + object + " ... ");
       return parseObject(strings.decode(fs.readFileSync(object, 'utf-8')));
     } else if (object.blueprint) return new Blueprint(object);
     else if (object.blueprint_book) return new BlueprintBook(object);
