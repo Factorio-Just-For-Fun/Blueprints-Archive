@@ -91,8 +91,8 @@ class BlueprintBook extends CustomObject {
   }
 
   // Adds an object to the blueprint book and returns this
-  addObject(object) {
-    this.blueprints.push(object === undefined ? undefined : parseObject(object));
+  addObject() {
+    arguments.forEach(object => this.blueprints.push(object === undefined ? undefined : parseObject(object)));
     return this;
   }
 
