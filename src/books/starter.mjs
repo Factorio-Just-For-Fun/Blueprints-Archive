@@ -4,6 +4,8 @@ import strings from '../util/strings.mjs';
 
 import printObject from '../dev-utils/tree-object.mjs';
 
+import createMainBus from '../main-bus.mjs';
+
 //
 // Start Program
 //
@@ -154,6 +156,43 @@ function generateBeltScienceBook() {
   );
 }
 
+function generateMainBus() {
+  let object = createMainBus([
+    "space-science-pack",
+    [ "production-science-pack", "utility-science-pack" ],
+    [ "military-science-pack", "chemical-science-pack" ],
+    [ "automation-science-pack", "logistic-science-pack" ],
+
+    ...new Array(12).fill("iron-plate"),
+    ...new Array(12).fill("copper-plate"),
+    ...new Array(4).fill("steel-plate"),
+
+    "fluid:water",
+    "fluid:lubricant",
+    "fluid:light-oil",
+    "fluid:sulfuric-acid",
+
+    ...new Array(8).fill("elecctronic-circuit"),
+    ...new Array(8).fill("plastic-bar"),
+
+    "advanced-circuit",
+    "advanced-circuit",
+    "coal",
+    "processing-unit",
+
+    "stone",
+    "stone",
+    "stone-brick",
+    "stone-brick",
+
+    "battery",
+    "concrete"
+  ]);
+
+  object.label = "Main Bus [Ashy]";
+  return object;
+}
+
 const blueprintBook = generateBaseBook()
   .addObject("./blueprints/balancers-raynquist.txt")
   .addObject("./blueprints/rail-grids-3-8/3-8-rail-network-spzi.txt")
@@ -161,7 +200,7 @@ const blueprintBook = generateBaseBook()
   .addObject(parseObject("./blueprints/rail-misc/pax.txt")
     .setContents("./blueprints/rail-misc/pax-depot-ash.txt", "PAX Train", 8) // 8 is the pax load without solars
   )
-  .addObject("./blueprints/bus-layout-expensive.txt")
+  .addObject(generateMainBus())
   .addObject(generateBeltScienceBook())
   .addObject("./blueprints/malls/kos-kerza-updated.txt")
   .addObject("./blueprints/rail-misc/construction-outpost-spzi.txt")
