@@ -82,7 +82,7 @@ function generateOnRailsBook() {
   .addObject("./blueprints/rail-designs-3-8/intermediates/petroleum-advanced-mskitty.txt")
   .addObject("./blueprints/rail-designs-3-8/intermediates/plastic-advanced-mskitty.txt")
 
-  .addObject(parseObject("./blueprints/rail-designs-3-8/science/all-science-12-beacon-kerza.txt").findBlueprint(6))
+  .addObject(parseObject("./blueprints/rail-designs-3-8/science/all-science-12-beacon-kerza.txt").findBlueprint(7))
 }
 
 function generateMilitaryBook() {
