@@ -127,6 +127,7 @@ function generateModulesBook() {
     }
   }).setContents(
     "./blueprints/rail-designs-3-8/modules/modules-from-raw-spzi-red.txt",
+    "./blueprints/rail-designs-3-8/modules/modules-from-raw-spzi-red-full-ashy.txt",
     parseObject("./blueprints/malls/modules.txt").findBlueprint(7)
   );
 }
