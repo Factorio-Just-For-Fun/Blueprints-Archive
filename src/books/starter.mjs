@@ -219,8 +219,9 @@ const blueprintBook = generateBaseBook()
 
 patching.standardizeStationNames(blueprintBook);
 
-const tag = !process.env.CI ? "Development Book" : "FJFF Blueprints compiled by Ashy314.\nhttps://discord.gg/ehHEDDnPWA";
-blueprintBook.modifyAllDescriptions(description => `${ description ? description + "\n\n" : "" }${ new Date().toISOString().split("T")[0] } ${tag}`); // Add new version tags
+if (process.env.CI) { // Add new version tags
+  blueprintBook.modifyAllDescriptions(description => `${ description ? description + "\n\n" : "" }${ new Date().toISOString().split("T")[0] } FJFF Blueprints compiled by Ashy314.\nhttps://discord.gg/ehHEDDnPWA`);
+}
 
 // Print to console if called directly
 import { fileURLToPath } from "url";
