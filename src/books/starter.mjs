@@ -175,7 +175,7 @@ function generateMainBus() {
     "fluid:sulfuric-acid",
 
     ...new Array(8).fill("electronic-circuit"),
-    ...new Array(8).fill("plastic-bar"),
+    ...new Array(12).fill("plastic-bar"),
 
     "advanced-circuit",
     "advanced-circuit",
