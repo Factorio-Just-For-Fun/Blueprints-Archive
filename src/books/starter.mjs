@@ -89,12 +89,12 @@ function generateMilitaryBook() {
   return new BlueprintBook({
     blueprint_book: {
       item: "blueprint_book",
-      label: "X on Rails - Unfiltered",
+      label: "Military Rails",
       icons: [
         { signal: { type: "item", name: "rail" }, index: 1 },
         { signal: { type: "item", name: "beacon" }, index: 2 },
-        { signal: { type: "virtual", name: "signal-U" }, index: 3 },
-        { signal: { type: "virtual", name: "signal-F" }, index: 4 }
+        { signal: { type: "item", name: "explosive-rocket" }, index: 3 },
+        { signal: { type: "item", name: "rocket" }, index: 4 }
       ],
       blueprints: [],
       active_index: 0,
@@ -103,11 +103,12 @@ function generateMilitaryBook() {
   }).addObject("./blueprints/biters/wallmoeba-mini-ashy.txt")
   .explode()
 
-  .addObject("./blueprints/biters/wallmoeba-segment-only-back-roboport.txt")
-  .addObject("./blueprints/biters/wallmoeba-segment-no-lasers-back-roboport.txt")
+  .addObject("./blueprints/biters/wallmoeba-segment.txt")
+  .addObject("./blueprints/biters/wallmoeba-segment-no-lasers.txt")
   .addObject("./blueprints/malls/military-hub-2.txt")
   .addObject("./blueprints/biters/artillery-shells-mskitty.txt")
   .addObject("./blueprints/biters/war-rails-mskitty.txt")
+  .explode()
 }
 
 function generateModulesBook() {
