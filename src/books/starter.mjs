@@ -39,9 +39,6 @@ function generateSolarBook() {
   return parseObject("./blueprints/power/solar-mskitty.txt")
     .setContents("Solar 87% Ratio mskitty", "1-1 Solar Load mskitty", "Solar Drop mskitty")
     .explode()
-    .addObject("./blueprints/belt/intermediates/sulfur-full-belt-mskitty.txt")
-    .addObject("./blueprints/belt/intermediates/sulfuric-acid-mskitty.txt")
-    .addObject("./blueprints/belt/intermediates/batteries-mskitty.txt")
     .addObject("./blueprints/malls/solar/solar-mskitty.txt")
     .addObject("./blueprints/malls/solar/accumulator-mskitty.txt")
 }
@@ -78,7 +75,6 @@ function generateOnRailsBook() {
     .explode()
   )
   .addObject("./blueprints/rail-designs-3-8/intermediates/red-chips-spzi.txt")
-  .addObject("./blueprints/rail-designs-3-8/intermediates/blue-chips-madkatz-mskitty.txt")
   .addObject("./blueprints/rail-designs-3-8/intermediates/petroleum-advanced-mskitty.txt")
   .addObject("./blueprints/rail-designs-3-8/intermediates/plastic-advanced-mskitty.txt")
 
@@ -105,7 +101,7 @@ function generateMilitaryBook() {
 
   .addObject("./blueprints/biters/wallmoeba-segment.txt")
   .addObject("./blueprints/biters/wallmoeba-segment-no-lasers.txt")
-  .addObject("./blueprints/malls/military-hub-2.txt")
+  .addObject("./blueprints/biters/explosive-rockets-mskitty.txt")
   .addObject("./blueprints/biters/artillery-shells-mskitty.txt")
   .addObject("./blueprints/biters/war-rails-mskitty.txt")
   .explode()
@@ -158,6 +154,34 @@ function generateBeltScienceBook() {
   );
 }
 
+function generateMainBase() {
+  return new BlueprintBook({
+    blueprint_book: {
+      item: "blueprint_book",
+      label: "Main Base",
+      icons: [
+        { signal: { type: "item", name: "electronic-circuit" }, index: 1 },
+        { signal: { type: "item", name: "sulfur" }, index: 2 },
+        { signal: { type: "item", name: "plastic-bar" }, index: 3 },
+        { signal: { type: "item", name: "constant-combinator" }, index: 4 }
+      ],
+      description: "Starter Game Blueprints for the Factorio Just For Fun Server. Compiled, scripted, and filtered by Ashy." + (process.env.GITHUB_SHA ? ' Commit: #' + process.env.GITHUB_SHA.substring(0, 7) : ''),
+      blueprints: [],
+      active_index: 0,
+      version: 281479275675648
+    }
+  }).addObject(generateMainBus())
+    .addObject("./blueprints/malls/kos-kerza-updated.txt")
+    .addObject("./blueprints/belt/intermediates/green-chips-expensive-drsupergood.txt")
+    .addObject("./blueprints/belt/intermediates/red-chips-expensive-kerza.txt")
+    .addObject("./blueprints/belt/intermediates/blue-chips-madkatz-mskitty.txt")
+    .addObject("./blueprints/belt/intermediates/plastic-double-mskitty.txt")
+    .addObject("./blueprints/belt/intermediates/sulfur-double-mskitty.txt")
+    .addObject("./blueprints/belt/intermediates/sulfuric-acid-mskitty.txt")
+    .addObject("./blueprints/belt/intermediates/batteries-mskitty.txt")
+    .addObject("./blueprints/smelting/kos-ash.txt")
+}
+
 function generateMainBus() {
   let object = createMainBus([
     "space-science-pack",
@@ -198,26 +222,25 @@ function generateMainBus() {
 const blueprintBook = generateBaseBook()
   .addObject("./blueprints/balancers-raynquist.txt")
   .addObject("./blueprints/rail-grids-3-8/3-8-rail-network-spzi.txt")
+  .addObject("./blueprints/rail-misc/construction-outpost-spzi.txt")
+
   .addObject(generateOnRailsBook())
   .addObject(parseObject("./blueprints/rail-misc/pax.txt")
     .setContents("./blueprints/rail-misc/pax-depot-ash.txt", "PAX Train", 8) // 8 is the pax load without solars
   )
-  .addObject(generateMainBus())
+  .addObject(generateMainBase())
+
   .addObject(generateBeltScienceBook())
-  .addObject("./blueprints/malls/kos-kerza-updated.txt")
-  .addObject("./blueprints/rail-misc/construction-outpost-spzi.txt")
   .addObject(generateSolarBook())
   .addObject(generateMilitaryBook())
-  .addObject("./blueprints/belt/intermediates/green-chips-expensive-drsupergood.txt")
-  .addObject("./blueprints/belt/intermediates/red-chips-expensive-kerza.txt")
-  .addObject("./blueprints/smelting/kos-ash.txt")
   .addObject("./blueprints/decorative/tiles/hexagon-gold-trimmed.txt")
   .addObject("./blueprints/power/uranium-processing-mskitty-updated-ratio-madkatz.txt")
   .addObject("./blueprints/power/reactor-2.4gw-ferront.txt")
+
   .addObject("./blueprints/power/starter-216.txt")
   .addObject(generateModulesBook())
+  .addObject("./blueprints/module-upgrader-pixelcort.txt")
   .addObject("./blueprints/deconstruction-ash.txt")
-  .addObject("./blueprints/module-upgrader-pixelcort.txt");
 
 patching.standardizeStationNames(blueprintBook);
 
