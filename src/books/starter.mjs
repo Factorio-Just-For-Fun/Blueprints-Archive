@@ -89,7 +89,7 @@ function generateMilitaryBook() {
   return new BlueprintBook({
     blueprint_book: {
       item: "blueprint_book",
-      label: "Military Rails",
+      label: "Military",
       icons: [
         { signal: { type: "item", name: "rail" }, index: 1 },
         { signal: { type: "item", name: "beacon" }, index: 2 },
