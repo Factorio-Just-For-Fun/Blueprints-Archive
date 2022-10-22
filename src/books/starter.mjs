@@ -172,6 +172,7 @@ function generateMainBase() {
     }
   }).addObject(generateMainBus())
     .addObject("./blueprints/malls/kos-kerza-updated.txt")
+    .addObject("./blueprints/belt/intermediates/gears-mskitty.txt")
     .addObject("./blueprints/belt/intermediates/green-chips-expensive-drsupergood.txt")
     .addObject("./blueprints/belt/intermediates/red-chips-expensive-kerza.txt")
     .addObject("./blueprints/belt/intermediates/blue-chips-madkatz-mskitty.txt")
