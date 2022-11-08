@@ -96,8 +96,10 @@ function generateMilitaryBook() {
       active_index: 0,
       version: 281479275675648
     }
-  }).addObject("./blueprints/biters/wallmoeba-mini-ashy.txt")
+  })
+  .addObject(parseObject("./blueprints/biters/wallmoeba-mini-ashy.txt").setContents(2, 3))
   .explode()
+  .addObject(parseObject("./blueprints/biters/wall-station-madkatz.txt"))
 
   .addObject("./blueprints/biters/wallmoeba-segment.txt")
   .addObject("./blueprints/biters/wallmoeba-segment-no-lasers.txt")
