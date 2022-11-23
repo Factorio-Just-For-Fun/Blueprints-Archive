@@ -76,8 +76,9 @@ function generateOnRailsBook() {
   )
   .addObject("./blueprints/rail-designs-3-8/intermediates/red-chips-spzi.txt")
   .addObject("./blueprints/rail-designs-3-8/intermediates/petroleum-advanced-mskitty.txt")
-  .addObject("./blueprints/rail-designs-3-8/intermediates/coal-liquefaction-plastic-mskitty.txt")
+  .addObject("./blueprints/rail-designs-3-8/intermediates/coal-liquefaction-petroleum-mskitty.txt")
   .addObject("./blueprints/rail-designs-3-8/intermediates/plastic-advanced-mskitty.txt")
+  .addObject("./blueprints/rail-designs-3-8/intermediates/coal-liquefaction-plastic-mskitty.txt")
 
   .addObject("./blueprints/rail-designs-3-8/science/all-science-12-modified-ashy.txt")
 }
