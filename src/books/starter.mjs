@@ -59,26 +59,19 @@ function generateOnRailsBook() {
       version: 281479275675648
     }
   })
-  .addObject(
-    parseObject("./blueprints/rail-designs-3-8/smelting/clocked-spzi-kerza.txt")
-    /*
-    .setContents(
-      0, 1, undefined, undefined, undefined, undefined,
-      6, 7, undefined, undefined, undefined, undefined,
-      ...(parseObject("./blueprints/rail-designs-3-8/smelting/clocked-steel-spzi.txt").explode().blueprints)
-    )
-    */
-  )
-  .addObject(
-    parseObject("./blueprints/rail-designs-3-8/intermediates/green-chips-spzi.txt")
-    .addObject("./blueprints/rail-designs-3-8/intermediates/green-chips-no-beacon-kerza.txt")
-    .explode()
-  )
-  .addObject("./blueprints/rail-designs-3-8/intermediates/red-chips-spzi.txt")
-  .addObject("./blueprints/rail-designs-3-8/intermediates/petroleum-advanced-mskitty.txt")
-  .addObject("./blueprints/rail-designs-3-8/intermediates/coal-liquefaction-petroleum-mskitty.txt")
-  .addObject("./blueprints/rail-designs-3-8/intermediates/plastic-advanced-mskitty.txt")
-  .addObject("./blueprints/rail-designs-3-8/intermediates/coal-liquefaction-plastic-mskitty.txt")
+  .addObject("./blueprints/rail-designs-3-8/smelting/clocked-kerza.txt")
+  .addObject("./blueprints/rail-designs-3-8/smelting/nobeacon-kerza-start.txt")
+  .addObject("./blueprints/rail-designs-3-8/smelting/nobeacon-kerza-extension.txt")
+
+  .addObject("./blueprints/rail-designs-3-8/intermediates/green-chips-kerza-start.txt")
+  .addObject("./blueprints/rail-designs-3-8/intermediates/green-chips-kerza-extension.txt")
+  .addObject("./blueprints/rail-designs-3-8/intermediates/green-chips-no-beacon-kerza.txt")
+  
+  .addObject("./blueprints/rail-designs-3-8/intermediates/red-chips-kerza-start.txt")
+  .addObject("./blueprints/rail-designs-3-8/intermediates/red-chips-kerza-extension.txt")
+
+  .addObject("./blueprints/rail-designs-3-8/fluids/plastic-advanced-mskitty-kerza.txt")
+  .addObject("./blueprints/rail-designs-3-8/fluids/coal-liquefaction-plastic-mskitty.txt")
 
   .addObject("./blueprints/rail-designs-3-8/science/all-science-12-modified-ashy.txt")
 }
@@ -129,6 +122,7 @@ function generateModulesBook() {
   }).setContents(
     "./blueprints/rail-designs-3-8/modules/modules-from-raw-spzi-red.txt",
     "./blueprints/rail-designs-3-8/modules/modules-from-raw-spzi-red-full-ashy.txt",
+    "./blueprints/rail-designs-3-8/modules/modules-endgame-kerza.txt",
     parseObject("./blueprints/malls/modules.txt").findBlueprint(7)
   );
 }
@@ -154,7 +148,7 @@ function generateBeltScienceBook() {
     "./blueprints/belt/science/yellow-1kmin-expensive-mskitty.txt",
     "./blueprints/belt/intermediates/low-density-structure-fixed-337-expensive-mskitty.txt",
     "./blueprints/belt/intermediates/rcu-744-fixed-expensive-mskitty.txt",
-    "./blueprints/belt/intermediates/rocket-fuel-740m-fixed-expensive-mskitty.txt"
+    "./blueprints/belt/fluids/rocket-fuel-740m-fixed-expensive-mskitty.txt"
   );
 }
 
@@ -176,16 +170,22 @@ function generateMainBase() {
     }
   }).addObject(generateMainBus())
     .addObject("./blueprints/malls/kos-kerza-updated.txt")
-    .addObject("./blueprints/oil-madkatz.txt")
+
+    .addObject("./blueprints/belt/fluids/oil-madkatz.txt")
+    .addObject("./blueprints/belt/fluids/coal-liquefaction-plastic-mskitty.txt")
+    .addObject("./blueprints/belt/fluids/plastic-double-mskitty.txt")
+
+    .addObject("./blueprints/belt/fluids/sulfur-double-mskitty.txt")
+    .addObject("./blueprints/belt/fluids/sulfuric-acid-mskitty.txt")
+    .addObject("./blueprints/belt/fluids/batteries-mskitty.txt")
+
     .addObject("./blueprints/belt/intermediates/gears-mskitty.txt")
     .addObject("./blueprints/belt/intermediates/green-chips-expensive-drsupergood.txt")
     .addObject("./blueprints/belt/intermediates/red-chips-expensive-kerza.txt")
     .addObject("./blueprints/belt/intermediates/blue-chips-madkatz-mskitty.txt")
-    .addObject("./blueprints/belt/intermediates/plastic-double-mskitty.txt")
-    .addObject("./blueprints/belt/intermediates/sulfur-double-mskitty.txt")
-    .addObject("./blueprints/belt/intermediates/sulfuric-acid-mskitty.txt")
-    .addObject("./blueprints/belt/intermediates/batteries-mskitty.txt")
+
     .addObject("./blueprints/smelting/kos-ash.txt")
+    .addObject("./blueprints/smelting/side-loading-with-lights-expensive-mskitty.txt")
 }
 
 function generateMainBus() {

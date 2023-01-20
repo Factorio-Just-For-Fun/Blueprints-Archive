@@ -6,6 +6,7 @@ import { parseObject, Blueprint, BlueprintBook } from '../objects.mjs';
 // If something needs fixed with assemblers, let Ashy know, or write something and submit a PR.
 const configByType = {
   'beacon': { 'speed-module-3': 2 },
+  'electric-furnace': { 'productivity-module-3': 2 },
   'lab': { 'productivity-module-3': 2 }
 }
 
