@@ -43,7 +43,7 @@ function generateSolarBook() {
     .addObject("./blueprints/malls/solar/accumulator-mskitty.txt")
 }
 
-function generateOnRailsBook() {
+function generateOnRailsBeaconedBook() {
   return new BlueprintBook({
     blueprint_book: {
       item: "blueprint_book",
@@ -60,12 +60,9 @@ function generateOnRailsBook() {
     }
   })
   .addObject("./blueprints/rail-designs-3-8/smelting/clocked-kerza.txt")
-  .addObject("./blueprints/rail-designs-3-8/smelting/nobeacon-kerza-start.txt")
-  .addObject("./blueprints/rail-designs-3-8/smelting/nobeacon-kerza-extension.txt")
 
   .addObject("./blueprints/rail-designs-3-8/intermediates/green-chips-kerza-start.txt")
   .addObject("./blueprints/rail-designs-3-8/intermediates/green-chips-kerza-extension.txt")
-  .addObject("./blueprints/rail-designs-3-8/intermediates/green-chips-no-beacon-kerza.txt")
   
   .addObject("./blueprints/rail-designs-3-8/intermediates/red-chips-kerza-start.txt")
   .addObject("./blueprints/rail-designs-3-8/intermediates/red-chips-kerza-extension.txt")
@@ -74,6 +71,27 @@ function generateOnRailsBook() {
   .addObject("./blueprints/rail-designs-3-8/fluids/coal-liquefaction-plastic-mskitty.txt")
 
   .addObject("./blueprints/rail-designs-3-8/science/all-science-12-modified-ashy.txt")
+}
+
+function generateOnRailsUnbeaconedBook() {
+  return new BlueprintBook({
+    blueprint_book: {
+      item: "blueprint_book",
+      label: "X on Rails - Unfiltered (No Beacons)",
+      icons: [
+        { signal: { type: "item", name: "rail" }, index: 1 },
+        { signal: { type: "item", name: "rail" }, index: 2 },
+        { signal: { type: "virtual", name: "signal-U" }, index: 3 },
+        { signal: { type: "virtual", name: "signal-F" }, index: 4 }
+      ],
+      blueprints: [],
+      active_index: 0,
+      version: 281479275675648
+    }
+  })
+  .addObject("./blueprints/rail-designs-3-8/smelting/nobeacon-kerza-start.txt")
+  .addObject("./blueprints/rail-designs-3-8/smelting/nobeacon-kerza-extension.txt")
+  .addObject("./blueprints/rail-designs-3-8/intermediates/green-chips-no-beacon-kerza.txt")
 }
 
 function generateMilitaryBook() {
@@ -230,7 +248,8 @@ const blueprintBook = generateBaseBook()
   .addObject("./blueprints/rail-grids-3-8/3-8-rail-network-spzi.txt")
   .addObject("./blueprints/rail-misc/construction-outpost-spzi.txt")
 
-  .addObject(generateOnRailsBook())
+  .addObject(generateOnRailsBeaconedBook())
+  .addObject(generateOnRailsUnbeaconedBook())
   .addObject(parseObject("./blueprints/rail-misc/pax.txt")
     .setContents("./blueprints/rail-misc/pax-depot-ash.txt", "PAX Train", 8) // 8 is the pax load without solars
   )
