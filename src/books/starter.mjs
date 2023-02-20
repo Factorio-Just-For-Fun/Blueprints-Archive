@@ -70,7 +70,7 @@ function generateOnRailsBeaconedBook() {
   .addObject("./blueprints/rail-designs-3-8/fluids/plastic-advanced-mskitty-kerza.txt")
   .addObject("./blueprints/rail-designs-3-8/fluids/coal-liquefaction-plastic-mskitty.txt")
 
-  .addObject("./blueprints/rail-designs-3-8/science/all-science-12-modified-ashy.txt")
+  .addObject("./blueprints/rail-designs-3-8/science/all-science-updated-kerza.txt")
 }
 
 function generateOnRailsUnbeaconedBook() {
@@ -187,7 +187,8 @@ function generateMainBase() {
       version: 281479275675648
     }
   }).addObject(generateMainBus())
-    .addObject("./blueprints/malls/kos-kerza-updated.txt")
+  .addObject("./blueprints/malls/kos-kerza-updated.txt")
+  .addObject("./blueprints/malls/modules-kerza.txt")
 
     .addObject("./blueprints/belt/fluids/oil-madkatz.txt")
     .addObject("./blueprints/belt/fluids/coal-liquefaction-plastic-mskitty.txt")
