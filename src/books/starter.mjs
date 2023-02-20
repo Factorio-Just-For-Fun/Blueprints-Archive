@@ -190,21 +190,23 @@ function generateMainBase() {
   .addObject("./blueprints/malls/kos-kerza-updated.txt")
   .addObject("./blueprints/malls/modules-kerza.txt")
 
-    .addObject("./blueprints/belt/fluids/oil-madkatz.txt")
-    .addObject("./blueprints/belt/fluids/coal-liquefaction-plastic-mskitty.txt")
-    .addObject("./blueprints/belt/fluids/plastic-double-mskitty.txt")
+  .addObject("./blueprints/belt/fluids/oil-madkatz.txt")
+  .addObject("./blueprints/belt/fluids/coal-liquefaction-plastic-mskitty.txt")
+  .addObject("./blueprints/belt/fluids/plastic-double-mskitty.txt")
 
-    .addObject("./blueprints/belt/fluids/sulfur-double-mskitty.txt")
-    .addObject("./blueprints/belt/fluids/sulfuric-acid-mskitty.txt")
-    .addObject("./blueprints/belt/fluids/batteries-mskitty.txt")
+  .addObject("./blueprints/belt/fluids/sulfur-double-mskitty.txt")
+  .addObject("./blueprints/belt/fluids/sulfuric-acid-mskitty.txt")
+  .addObject("./blueprints/belt/fluids/batteries-mskitty.txt")
 
-    .addObject("./blueprints/belt/intermediates/gears-mskitty.txt")
-    .addObject("./blueprints/belt/intermediates/green-chips-expensive-drsupergood.txt")
-    .addObject("./blueprints/belt/intermediates/red-chips-expensive-kerza.txt")
-    .addObject("./blueprints/belt/intermediates/blue-chips-madkatz-mskitty.txt")
+  .addObject("./blueprints/belt/intermediates/gears-mskitty.txt")
+  .addObject("./blueprints/belt/intermediates/green-chips-expensive-drsupergood.txt")
+  .addObject("./blueprints/belt/intermediates/red-chips-expensive-kerza.txt")
+  .addObject("./blueprints/belt/intermediates/blue-chips-madkatz-mskitty.txt")
 
-    .addObject("./blueprints/smelting/kos-ash.txt")
-    .addObject("./blueprints/smelting/side-loading-with-lights-expensive-mskitty.txt")
+  .addObject("./blueprints/belt/labs.txt")
+
+  .addObject("./blueprints/smelting/kos-ash.txt")
+  .addObject("./blueprints/smelting/side-loading-with-lights-expensive-mskitty.txt")
 }
 
 function generateMainBus() {
@@ -265,6 +267,8 @@ const blueprintBook = generateBaseBook()
 
   .addObject("./blueprints/power/starter-216.txt")
   .addObject(generateModulesBook())
+  .addObject("./blueprints/rail-designs-3-8/mines/mining-left-jrz.txt")
+  .addObject("./blueprints/rail-designs-3-8/mines/mining-right-jrz.txt")
   .addObject("./blueprints/module-upgrader-pixelcort.txt")
   .addObject("./blueprints/deconstruction-ash.txt")
 
