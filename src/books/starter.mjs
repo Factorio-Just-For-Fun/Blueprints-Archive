@@ -230,7 +230,7 @@ function generateMainBus() {
 
     "advanced-circuit",
     "advanced-circuit",
-    "coal",
+    "advanced-circuit",
     "processing-unit",
 
     "stone",
@@ -238,6 +238,8 @@ function generateMainBus() {
     "stone-brick",
     "stone-brick",
 
+    "coal",
+    "coal",
     "battery",
     "concrete"
   ]);
