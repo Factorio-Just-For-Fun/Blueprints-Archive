@@ -67,10 +67,13 @@ function generateOnRailsBeaconedBook() {
   .addObject("./blueprints/rail-designs-3-8/intermediates/red-chips-kerza-start.txt")
   .addObject("./blueprints/rail-designs-3-8/intermediates/red-chips-kerza-extension.txt")
 
+  .addObject("./blueprints/rail-designs-3-8/intermediates/blue-chips-cfras5.txt")
+
   .addObject("./blueprints/rail-designs-3-8/fluids/plastic-advanced-mskitty-kerza.txt")
   .addObject("./blueprints/rail-designs-3-8/fluids/coal-liquefaction-plastic-mskitty.txt")
 
   .addObject("./blueprints/rail-designs-3-8/science/all-science-updated-kerza.txt")
+  .addObject("./blueprints/rail-designs-3-8/modules/modules-cfras5.txt")
 }
 
 function generateOnRailsUnbeaconedBook() {
@@ -122,29 +125,6 @@ function generateMilitaryBook() {
   .explode()
 }
 
-function generateModulesBook() {
-  return new BlueprintBook({
-    blueprint_book: {
-      item: "blueprint_book",
-      label: "Modules",
-      icons: [
-        { signal: { type: "item", name: "iron-ore" }, index: 1 },
-        { signal: { type: "item", name: "copper-ore" }, index: 2 },
-        { signal: { type: "item", name: "speed-module-3" }, index: 3 },
-        { signal: { type: "item", name: "productivity-module-3" }, index: 4 }
-      ],
-      blueprints: [],
-      active_index: 0,
-      version: 281479275675648
-    }
-  }).setContents(
-    "./blueprints/rail-designs-3-8/modules/modules-from-raw-spzi-red.txt",
-    "./blueprints/rail-designs-3-8/modules/modules-from-raw-spzi-red-full-ashy.txt",
-    "./blueprints/rail-designs-3-8/modules/modules-endgame-kerza.txt",
-    parseObject("./blueprints/malls/modules.txt").findBlueprint(7)
-  );
-}
-
 function generateBeltScienceBook() {
   return new BlueprintBook({
     blueprint_book: {
@@ -188,7 +168,8 @@ function generateMainBase() {
     }
   }).addObject(generateMainBus())
   .addObject("./blueprints/malls/kos-kerza-updated.txt")
-  .addObject("./blueprints/malls/modules-kerza.txt")
+  .addObject("./blueprints/malls/belts.txt")
+  .addObject("./blueprints/malls/bot-factory.txt")
 
   .addObject("./blueprints/belt/fluids/oil-madkatz.txt")
   .addObject("./blueprints/belt/fluids/coal-liquefaction-plastic-mskitty.txt")
@@ -200,13 +181,19 @@ function generateMainBase() {
 
   .addObject("./blueprints/belt/intermediates/gears-mskitty.txt")
   .addObject("./blueprints/belt/intermediates/green-chips-expensive-drsupergood.txt")
+  .addObject("./blueprints/belt/intermediates/green-chips-15k-expensive-mskitty.txt")
   .addObject("./blueprints/belt/intermediates/red-chips-expensive-kerza.txt")
+  .addObject("./blueprints/belt/intermediates/red-chips-expensive-3.6k-mskitty.txt")
   .addObject("./blueprints/belt/intermediates/blue-chips-madkatz-mskitty.txt")
 
   .addObject("./blueprints/belt/labs.txt")
 
   .addObject("./blueprints/smelting/kos-ash.txt")
-  .addObject("./blueprints/smelting/side-loading-with-lights-expensive-mskitty.txt")
+  .addObject("./blueprints/smelting/bus-upgradeable-mskitty.txt")
+  .addObject("./blueprints/smelting/steel-upgradeable-mskitty.txt")
+  .addObject("./blueprints/smelting/side-loading-copper-mskitty.txt")
+  .addObject("./blueprints/smelting/side-loading-iron-mskitty.txt")
+  .addObject("./blueprints/smelting/steel-mskitty.txt")
 }
 
 function generateMainBus() {
@@ -255,22 +242,20 @@ const blueprintBook = generateBaseBook()
 
   .addObject(generateOnRailsBeaconedBook())
   .addObject(generateOnRailsUnbeaconedBook())
-  .addObject(parseObject("./blueprints/rail-misc/pax.txt")
-    .setContents("./blueprints/rail-misc/pax-depot-ash.txt", "PAX Train", 8) // 8 is the pax load without solars
-  )
   .addObject(generateMainBase())
 
   .addObject(generateBeltScienceBook())
+  .addObject("./blueprints/belt/science-non-expensive-2.txt")
   .addObject(generateSolarBook())
   .addObject(generateMilitaryBook())
   .addObject("./blueprints/decorative/tiles/hexagon-gold-trimmed.txt")
+  
   .addObject("./blueprints/power/uranium-processing-mskitty-updated-ratio-madkatz.txt")
   .addObject("./blueprints/power/reactor-2.4gw-ferront.txt")
-
   .addObject("./blueprints/power/starter-216.txt")
-  .addObject(generateModulesBook())
-  .addObject("./blueprints/rail-designs-3-8/mines/mining-left-jrz.txt")
-  .addObject("./blueprints/rail-designs-3-8/mines/mining-right-jrz.txt")
+
+  .addObject("./blueprints/rail-designs-3-8/mines/mines-jrz.txt")
+  .addObject("./blueprints/rail-designs-3-8/mines/mine-uranium.txt")
   .addObject("./blueprints/module-upgrader-pixelcort.txt")
   .addObject("./blueprints/deconstruction-ash.txt")
 
