@@ -184,7 +184,7 @@ function generateMainBase() {
   .addObject("./blueprints/belt/intermediates/green-chips-15k-expensive-mskitty.txt")
   .addObject("./blueprints/belt/intermediates/red-chips-expensive-kerza.txt")
   .addObject("./blueprints/belt/intermediates/red-chips-expensive-3.6k-mskitty.txt")
-  .addObject("./blueprints/belt/intermediates/blue-chips-madkatz-mskitty.txt")
+  .addObject("./blueprints/belt/intermediates/blue-chips-jrz-madkatz-mskitty.txt")
 
   .addObject("./blueprints/belt/labs.txt")
 
@@ -249,7 +249,7 @@ const blueprintBook = generateBaseBook()
   .addObject(generateSolarBook())
   .addObject(generateMilitaryBook())
   .addObject("./blueprints/decorative/tiles/hexagon-gold-trimmed.txt")
-  
+
   .addObject("./blueprints/power/uranium-processing-mskitty-updated-ratio-madkatz.txt")
   .addObject("./blueprints/power/reactor-2.4gw-ferront.txt")
   .addObject("./blueprints/power/starter-216.txt")
