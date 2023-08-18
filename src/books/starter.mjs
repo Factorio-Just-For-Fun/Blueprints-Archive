@@ -74,7 +74,7 @@ function generateOnRailsBeaconedBook() {
   .addObject("./blueprints/rail-designs-3-8/fluids/coal-liquefaction-plastic-mskitty.txt")
 
   .addObject("./blueprints/rail-designs-3-8/science/all-science-updated-kerza.txt")
-  .addObject("./blueprints/rail-designs-3-8/modules/modules-cfras5.txt")
+  .addObject("./blueprints/rail-designs-3-8/modules/modules-from-raw-kerza.txt")
 }
 
 function generateOnRailsUnbeaconedBook() {
@@ -200,6 +200,34 @@ function generateMainBase() {
   .addObject("./blueprints/smelting/steel-mskitty.txt")
 }
 
+
+function generateConstructionBook() {
+  return new BlueprintBook({
+    blueprint_book: {
+      item: "blueprint_book",
+      label: "Construction Outpost [item=locomotive] [item=assembling-machine-3]",
+      icons: [
+        { signal: { type: "item", name: "locomotive" }, index: 1 },
+        { signal: { type: "item", name: "deconstruction-planner" }, index: 2 }
+      ],
+      blueprints: [],
+      active_index: 0,
+      version: 281479275675648
+    }
+  })
+  .addObject("./blueprints/rail-misc/construction-load-spzi.txt")
+  .addObject("./blueprints/rail-misc/construction-unload-spzi.txt")
+  .addObject("./blueprints/rail-misc/mine-builder.txt")
+  .addObject("./blueprints/rail-misc/trash-train.txt")
+  .addObject("./blueprints/rail-misc/trash-unload.txt")
+  .addObject("./blueprints/rail-misc/construction-unload-spzi.txt")
+  .addObject("./blueprints/rail-misc/module-load.txt")
+  .addObject("./blueprints/rail-misc/module-unload.txt")
+  .addObject("./blueprints/rail-misc/module-unload-t1.txt")
+  .addObject("./blueprints/rail-misc/reactor-load.txt")
+  .addObject("./blueprints/rail-misc/reactor-unload.txt")
+}
+
 function generateMainBus() {
   let object = createMainBus([
     "space-science-pack",
@@ -242,7 +270,7 @@ function generateMainBus() {
 const blueprintBook = generateBaseBook()
   .addObject("./blueprints/balancers-raynquist.txt")
   .addObject("./blueprints/rail-grids-3-8/3-8-rail-network-spzi.txt")
-  .addObject("./blueprints/rail-misc/construction-outpost-spzi.txt")
+  .addObject(generateConstructionBook())
 
   .addObject(generateOnRailsBeaconedBook())
   .addObject(generateOnRailsUnbeaconedBook())
@@ -253,7 +281,7 @@ const blueprintBook = generateBaseBook()
   .addObject(generateSolarBook())
   .addObject(generateMilitaryBook())
 
-  .addObject("./blueprints/power/uranium-processing-large.txt")
+  .addObject("./blueprints/power/uranium-processing-kerza.txt")
   .addObject("./blueprints/power/reactor-2.4gw-ferront.txt")
   .addObject("./blueprints/power/starter-216.txt")
 
