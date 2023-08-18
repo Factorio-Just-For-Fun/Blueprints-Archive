@@ -61,15 +61,16 @@ function generateOnRailsBeaconedBook() {
   })
   .addObject("./blueprints/rail-designs-3-8/smelting/clocked-kerza.txt")
 
-  .addObject("./blueprints/rail-designs-3-8/intermediates/green-chips-kerza-start.txt")
-  .addObject("./blueprints/rail-designs-3-8/intermediates/green-chips-kerza-extension.txt")
+  .addObject("./blueprints/rail-designs-3-8/intermediates/green-chips-from-raw-kerza-start.txt")
+  .addObject("./blueprints/rail-designs-3-8/intermediates/green-chips-from-raw-kerza-extension.txt")
   
+  .addObject("./blueprints/rail-designs-3-8/intermediates/red-chips-mskitty.txt")
   .addObject("./blueprints/rail-designs-3-8/intermediates/red-chips-kerza-start.txt")
   .addObject("./blueprints/rail-designs-3-8/intermediates/red-chips-kerza-extension.txt")
 
   .addObject("./blueprints/rail-designs-3-8/intermediates/blue-chips-cfras5.txt")
 
-  .addObject("./blueprints/rail-designs-3-8/fluids/plastic-advanced-mskitty-kerza.txt")
+  .addObject("./blueprints/rail-designs-3-8/fluids/plastic-advanced-mskitty.txt")
   .addObject("./blueprints/rail-designs-3-8/fluids/coal-liquefaction-plastic-mskitty.txt")
 
   .addObject("./blueprints/rail-designs-3-8/science/all-science-updated-kerza.txt")
@@ -94,6 +95,7 @@ function generateOnRailsUnbeaconedBook() {
   })
   .addObject("./blueprints/rail-designs-3-8/smelting/nobeacon-kerza-start.txt")
   .addObject("./blueprints/rail-designs-3-8/smelting/nobeacon-kerza-extension.txt")
+  .addObject("./blueprints/rail-designs-3-8/smelting/steel-nobeacon-mskitty.txt")
   .addObject("./blueprints/rail-designs-3-8/intermediates/green-chips-no-beacon-kerza.txt")
 }
 
@@ -144,6 +146,7 @@ function generateBeltScienceBook() {
     "./blueprints/belt/science/gray-1kmin-expensive-mskitty.txt",
     "./blueprints/belt/science/purple-1kmin-red-expensive-mskitty.txt",
     "./blueprints/belt/science/yellow-1kmin-expensive-mskitty.txt",
+    "./blueprints/belt/science/space-1kmin-expensive-mskitty.txt",
     "./blueprints/belt/intermediates/low-density-structure-fixed-337-expensive-mskitty.txt",
     "./blueprints/belt/intermediates/rcu-744-fixed-expensive-mskitty.txt",
     "./blueprints/belt/fluids/rocket-fuel-740m-fixed-expensive-mskitty.txt"
@@ -173,6 +176,7 @@ function generateMainBase() {
 
   .addObject("./blueprints/belt/fluids/oil-madkatz.txt")
   .addObject("./blueprints/belt/fluids/coal-liquefaction-plastic-mskitty.txt")
+  .addObject("./blueprints/belt/fluids/solid-fuel-expensive-mskitty.txt")
   .addObject("./blueprints/belt/fluids/plastic-double-mskitty.txt")
 
   .addObject("./blueprints/belt/fluids/sulfur-double-mskitty.txt")
@@ -245,12 +249,11 @@ const blueprintBook = generateBaseBook()
   .addObject(generateMainBase())
 
   .addObject(generateBeltScienceBook())
-  .addObject("./blueprints/belt/science-non-expensive-2.txt")
+  .addObject("./blueprints/belt/science-expensive.txt")
   .addObject(generateSolarBook())
   .addObject(generateMilitaryBook())
-  .addObject("./blueprints/decorative/tiles/hexagon-gold-trimmed.txt")
 
-  .addObject("./blueprints/power/uranium-processing-mskitty-updated-ratio-madkatz.txt")
+  .addObject("./blueprints/power/uranium-processing-large.txt")
   .addObject("./blueprints/power/reactor-2.4gw-ferront.txt")
   .addObject("./blueprints/power/starter-216.txt")
 
