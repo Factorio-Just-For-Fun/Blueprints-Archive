@@ -4,7 +4,6 @@ import strings from '../util/strings.mjs';
 
 import printObject from '../dev-utils/tree-object.mjs';
 
-import construction from './construction.mjs';
 import mainbase from './mainbase.mjs';
 import military from './military.mjs';
 import outposts_unbeaconed from './outposts-unbeaconed.mjs';
@@ -44,7 +43,7 @@ function generateBaseBook() {
 const blueprintBook = generateBaseBook()
   .addObject("./blueprints/balancers-raynquist.txt")
   .addObject(rails)
-  .addObject(construction)
+  .addObject("./blueprints/rail-misc/construction-compendium.txt")
 
   .addObject(outposts)
   .addObject(outposts_unbeaconed)
