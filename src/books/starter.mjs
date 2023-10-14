@@ -56,6 +56,7 @@ const blueprintBook = generateBaseBook()
 
   .addObject("./blueprints/power/uranium-processing-kerza.txt")
   .addObject("./blueprints/power/reactor-2.4gw-ferront.txt")
+  .addObject("./blueprints/power/reactor-tileable-khornar.txt")
   .addObject("./blueprints/power/starter-216.txt")
 
   .addObject("./blueprints/rail-designs-3-8/mines/mines-jrz.txt")
