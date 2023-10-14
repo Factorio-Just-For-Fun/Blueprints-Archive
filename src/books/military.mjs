@@ -15,12 +15,8 @@ const blueprintBook = new BlueprintBook({
       version: 281479275675648
     }
   })
-  .addObject(parseObject("./blueprints/biters/wallmoeba-mini-ashy.txt").setContents(2, 3))
-  .explode()
-  .addObject("./blueprints/biters/wall-station-madkatz.txt")
-
-  .addObject("./blueprints/biters/wallmoeba-segment.txt")
-  .addObject("./blueprints/biters/wallmoeba-segment-no-lasers.txt")
+  
+  .addObject("./blueprints/biters/walls-pinko.txt")
   .addObject("./blueprints/biters/explosive-rockets-mskitty.txt")
   .addObject("./blueprints/biters/artillery-shells-mskitty.txt")
   .addObject("./blueprints/biters/war-rails-mskitty.txt")
