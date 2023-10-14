@@ -9,6 +9,7 @@ import mainbase from './mainbase.mjs';
 import military from './military.mjs';
 import outposts_unbeaconed from './outposts-unbeaconed.mjs';
 import outposts from './outposts.mjs';
+import rails from './rails.mjs';
 import science from './science.mjs';
 import solar from './solar.mjs';
 
@@ -42,7 +43,7 @@ function generateBaseBook() {
 
 const blueprintBook = generateBaseBook()
   .addObject("./blueprints/balancers-raynquist.txt")
-  .addObject("./blueprints/rail-grids-3-8/3-8-rail-network-spzi.txt")
+  .addObject(rails)
   .addObject(construction)
 
   .addObject(outposts)
