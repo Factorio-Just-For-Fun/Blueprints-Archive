@@ -1,7 +1,6 @@
 import fs from 'fs/promises';
 import path from 'path';
 import strings from '../util/strings.mjs';
-import downgradeModules from './modded-fix-override.mjs'
 
 import { parseObject } from '../objects.mjs';
 //
@@ -38,7 +37,6 @@ for (let file of await fs.readdir(explodeDir, { withFileTypes: true })) {
   for (let blueprint of object.blueprint_book.blueprints) {
     // Delete index
     blueprint = parseObject(blueprint);
-    blueprint = downgradeModules(blueprint);
 
     // Write file
     await fs.writeFile(path.join(outputDir, blueprint.label.replace(/[\\/]/g, "") + ".txt"), strings.encode(blueprint.toObject()));
