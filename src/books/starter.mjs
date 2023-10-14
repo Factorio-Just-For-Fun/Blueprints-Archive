@@ -1,4 +1,4 @@
-import { parseObject, BlueprintBook, Blueprint } from '../objects.mjs';
+import { parseObject, BlueprintBook } from '../objects.mjs';
 import patching from '../util/patching.mjs';
 import strings from '../util/strings.mjs';
 
@@ -296,7 +296,7 @@ if (process.env.CI) { // Add new version tags
   blueprintBook.modifyAllDescriptions(description => `${ description ? description + "\n\n" : "" }${ new Date().toISOString().split("T")[0] } FJFF Blueprints compiled by Ashy314.\nhttps://discord.gg/ehHEDDnPWA`);
 }
 
-// Print to console if called directly
+// Copy to clipboard if called directly
 import { fileURLToPath } from "url";
 if (process.argv[1] == fileURLToPath(import.meta.url)) {
   const clipboard = (await import("clipboardy")).default;
