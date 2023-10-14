@@ -67,8 +67,7 @@ const blueprintBook = new BlueprintBook({
   .addObject("./blueprints/belt/fluids/solid-fuel-expensive-mskitty.txt")
   .addObject("./blueprints/belt/fluids/plastic-double-mskitty.txt")
 
-  .addObject("./blueprints/belt/fluids/sulfur-double-mskitty.txt")
-  .addObject("./blueprints/belt/fluids/sulfuric-acid-mskitty.txt")
+  .addObject("./blueprints/belt/fluids/sulfur-sulfuric-combined-mskitty.txt")
   .addObject("./blueprints/belt/fluids/batteries-mskitty.txt")
 
   .addObject("./blueprints/belt/intermediates/gears-mskitty.txt")
