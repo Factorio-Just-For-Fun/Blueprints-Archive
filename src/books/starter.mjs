@@ -23,7 +23,7 @@ function generateBaseBook() {
         { signal: { type: "virtual", name: "signal-F" }, index: 3 },
         { signal: { type: "virtual", name: "signal-F" }, index: 4 }
       ],
-      description: "Starter Game Blueprints for the Factorio Just For Fun Server. Compiled, scripted, and filtered by Ashy." + (process.env.GITHUB_SHA ? ' Commit: #' + process.env.GITHUB_SHA.substring(0, 7) : ''),
+      description: "Starter Game Blueprints for the Factorio Just For Fun Server. Compiled, scripted, and filtered by Ashy.",
       blueprints: [],
       active_index: 0,
       version: 281479275675648
