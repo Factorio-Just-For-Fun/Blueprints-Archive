@@ -15,8 +15,8 @@ const blueprintBook = new BlueprintBook({
 .addObject("./blueprints/rail-grids-3-8/2-3-width-spzi.txt")
 .addObject("./blueprints/rail-grids-3-8/4-3-width-spzi.txt")
 .addObject("./blueprints/rail-grids-3-8/3-8-stackers-mskitty.txt")
-.addObject("./blueprints/rail-grids-3-8/solid-loading-spzi.txt")
-.addObject("./blueprints/rail-grids-3-8/liquid-loading-spzi-mskitty.txt")
+.addObject("./blueprints/rail-grids-3-8/solid-loading-spzi-kerza.txt")
+.addObject("./blueprints/rail-grids-3-8/liquid-loading-spzi-mskitty-kerza.txt")
 .addObject("./blueprints/rail-grids-3-8/trains-mskitty.txt")
 .addObject("./blueprints/rail-grids-3-8/fuels-spzi.txt")
 

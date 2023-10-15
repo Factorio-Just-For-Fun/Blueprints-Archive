@@ -62,7 +62,7 @@ const blueprintBook = new BlueprintBook({
   .addObject("./blueprints/malls/belts.txt")
   .addObject("./blueprints/malls/bot-factory.txt")
 
-  .addObject("./blueprints/belt/fluids/oil-madkatz.txt")
+  .addObject("./blueprints/belt/fluids/oil-kerza.txt")
   .addObject("./blueprints/belt/fluids/coal-liquefaction-plastic-mskitty.txt")
   .addObject("./blueprints/belt/fluids/solid-fuel-expensive-mskitty.txt")
   .addObject("./blueprints/belt/fluids/plastic-double-mskitty.txt")
