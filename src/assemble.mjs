@@ -69,7 +69,7 @@ async function run(books, options) {
 
     if (options.copy) {
       const clipboard = (await import("clipboardy")).default;
-      clipboard.writeSync(copyString);
+      clipboard.writeSync(string);
       if (!options.silent) console.log("Copied to clipboard.")
     }
   }
