@@ -42,7 +42,7 @@ async function run(books, options) {
     blueprint = blueprint.modifyAllDescriptions(description => description ? description : "") // Add description if none
       .modifyAllDescriptions(description => { // Remove old version tags
         let newDescription = description.replace(/\d{4}-\d{2}-\d{2} FJFF Common Blueprints compiled by i_cant.\nhttps:\/\/discord\.gg\/ehHEDDnPWA/g, "");
-        if (newDescription != description) console.warn("Blueprint contained outdated tag: " + description);
+        if (newDescription != description) console.warn("Blueprint contained outdated tag: " + newDescription);
 
         return newDescription;
       })
