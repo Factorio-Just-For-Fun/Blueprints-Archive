@@ -21,7 +21,7 @@ program
   .option('-c, --copy', 'copy the blueprint to clipboard')
   .option('-t, --tag', 'tag with the date')
   .option('-s, --silent', 'operate silently')
-  .addOption(new Option('-a, --all', 'build all books').implies({ books: allBooks }))
+  .addOption(new Option('-a, --all', 'build all books'))
   .addArgument(new Argument('[books...]', 'specify books').choices(allBooks).default([ "starter.mjs" ]))
   .action(run);
 
@@ -32,6 +32,8 @@ program.parse();
 //
 async function run(books, options) {
   await fs.mkdir(options.output, { recursive: true });
+
+  if (options.all) books = allBooks;
 
   for (let file of books) {
     // Load the blueprint and standardize
