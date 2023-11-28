@@ -74,7 +74,7 @@ const blueprintBook = new BlueprintBook({
   .addObject("./blueprints/belt/intermediates/green-chips-15k-expensive-mskitty.txt")
   .addObject("./blueprints/belt/intermediates/red-chips-expensive-kerza.txt")
   .addObject("./blueprints/belt/intermediates/red-chips-expensive-3.6k-mskitty.txt")
-  .addObject("./blueprints/belt/intermediates/blue-chips-jrz-madkatz-mskitty.txt")
+  .addObject("./blueprints/belt/intermediates/blue-chips-mskitty.txt")
 
   .addObject("./blueprints/belt/labs.txt")
 
