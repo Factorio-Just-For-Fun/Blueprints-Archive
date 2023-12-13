@@ -46,7 +46,7 @@ const blueprintBook = generateBaseBook()
   .addObject(mainbase)
 
   .addObject(science)
-  .addObject("./blueprints/belt/science-expensive.txt")
+  .addObject("./blueprints/belt/science-expensive/early-tileable.txt")
   .addObject(solar)
   .addObject(military)
 

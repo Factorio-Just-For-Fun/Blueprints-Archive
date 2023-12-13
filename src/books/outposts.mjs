@@ -17,13 +17,13 @@ const blueprintBook = new BlueprintBook({
 })
 .addObject("./blueprints/rail-designs-3-8/smelting/clocked-kerza.txt")
 
-.addObject("./blueprints/rail-designs-3-8/intermediates/green-chips-from-raw-kerza-start.txt")
-.addObject("./blueprints/rail-designs-3-8/intermediates/green-chips-from-raw-kerza-extension.txt")
+.addObject("./blueprints/rail-designs-3-8/intermediates-expensive/green-chips-from-raw-kerza-start.txt")
+.addObject("./blueprints/rail-designs-3-8/intermediates-expensive/green-chips-from-raw-kerza-extension.txt")
 
-.addObject("./blueprints/rail-designs-3-8/fluids/plastic-advanced-mskitty.txt")
-.addObject("./blueprints/rail-designs-3-8/fluids/coal-liquefaction-plastic-mskitty.txt")
+.addObject("./blueprints/rail-designs-3-8/fluids-universal/plastic-advanced-mskitty.txt")
+.addObject("./blueprints/rail-designs-3-8/fluids-universal/coal-liquefaction-plastic-mskitty.txt")
 
-.addObject("./blueprints/rail-designs-3-8/science/all-science-from-raw-kerza.txt")
-.addObject("./blueprints/rail-designs-3-8/modules/modules-from-raw-kerza.txt")
+.addObject("./blueprints/rail-designs-3-8/science-expensive/all-science-from-raw-kerza.txt")
+.addObject("./blueprints/rail-designs-3-8/modules-expensive/modules-from-raw-kerza.txt")
 
 export default blueprintBook;

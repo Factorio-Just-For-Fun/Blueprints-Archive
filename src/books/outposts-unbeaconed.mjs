@@ -18,6 +18,6 @@ const blueprintBook = new BlueprintBook({
 .addObject("./blueprints/rail-designs-3-8/smelting/nobeacon-kerza-start.txt")
 .addObject("./blueprints/rail-designs-3-8/smelting/nobeacon-kerza-extension.txt")
 .addObject("./blueprints/rail-designs-3-8/smelting/steel-nobeacon-mskitty.txt")
-.addObject("./blueprints/rail-designs-3-8/intermediates/green-chips-no-beacon-kerza.txt")
+.addObject("./blueprints/rail-designs-3-8/intermediates-expensive/green-chips-no-beacon-kerza.txt")
 
 export default blueprintBook;

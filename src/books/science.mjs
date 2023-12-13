@@ -12,14 +12,14 @@ const blueprintBook = new BlueprintBook({
     version: 281479275675648
   }
 }).setContents(
-  "./blueprints/belt/science/red-1kmin-expensive-mskitty.txt",
-  "./blueprints/belt/science/green-1kmin-expensive-mskitty.txt",
-  "./blueprints/belt/science/blue-1kmin-expensive-mskitty.txt",
-  "./blueprints/belt/science/gray-1kmin-expensive-mskitty.txt",
-  "./blueprints/belt/science/purple-1kmin-red-expensive-mskitty.txt",
-  "./blueprints/belt/science/yellow-1kmin-expensive-mskitty.txt",
-  "./blueprints/belt/science/space-1kmin-expensive-mskitty.txt",
-  "./blueprints/belt/intermediates/low-density-structure-fixed-337-expensive-mskitty.txt"
+  "./blueprints/belt/science-expensive/red-1kmin-mskitty.txt",
+  "./blueprints/belt/science-expensive/green-1kmin-mskitty.txt",
+  "./blueprints/belt/science-expensive/blue-1kmin-mskitty.txt",
+  "./blueprints/belt/science-expensive/gray-1kmin-mskitty.txt",
+  "./blueprints/belt/science-expensive/purple-1kmin-red-mskitty.txt",
+  "./blueprints/belt/science-expensive/yellow-1kmin-mskitty.txt",
+  "./blueprints/belt/science-expensive/space-1kmin-mskitty.txt",
+  "./blueprints/belt/intermediates-expensive/low-density-structure-fixed-337-mskitty.txt"
 );
 
 export default blueprintBook;
