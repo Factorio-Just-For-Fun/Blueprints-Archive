@@ -12,9 +12,12 @@ const prioritizeDirectories = true;
 
 // Space = root dir
 async function loadDirectory(relativePath) {
+  console.log("123")
+  console.log(await fs.readdir("./blueprints"))
   const output = [];
 
   for (let file of await fs.readdir(path.join(sourceDir, relativePath), { withFileTypes: true })) {
+    console.log(123)
     if (file.isDirectory()) {
       // Make a new book
       const blueprintBook = new BlueprintBook({
@@ -53,23 +56,27 @@ async function loadDirectory(relativePath) {
 // Start Program
 //
 
-const blueprintBook = new BlueprintBook({
-  blueprint_book: {
-    item: "blueprint_book",
-    label: "[Ashy] All Blueprints!",
-    icons: [
-      { signal: { type: "virtual", name: "signal-A" }, index: 1 },
-      { signal: { type: "virtual", name: "signal-S" }, index: 2 },
-      { signal: { type: "virtual", name: "signal-H" }, index: 3 },
-      { signal: { type: "virtual", name: "signal-Y" }, index: 4 }
-    ],
-    description: "All blueprints in the repository. Compiled by Ashy314, though not vetted for quality. Do not post in game blueprints." + (process.env.GITHUB_SHA ? '\nCommit: #' + process.env.GITHUB_SHA.substring(0, 7) : ''),
-    blueprints: [],
-    active_index: 0,
-    version: 281479275675648
-  }
-});
+async function generate(flags) {
+  const blueprintBook = new BlueprintBook({
+    blueprint_book: {
+      item: "blueprint_book",
+      label: "[Ashy] All Blueprints!",
+      icons: [
+        { signal: { type: "virtual", name: "signal-A" }, index: 1 },
+        { signal: { type: "virtual", name: "signal-S" }, index: 2 },
+        { signal: { type: "virtual", name: "signal-H" }, index: 3 },
+        { signal: { type: "virtual", name: "signal-Y" }, index: 4 }
+      ],
+      description: "All blueprints in the repository. Compiled by Ashy314, though not vetted for quality. Do not post in game blueprints." + (process.env.GITHUB_SHA ? '\nCommit: #' + process.env.GITHUB_SHA.substring(0, 7) : ''),
+      blueprints: [],
+      active_index: 0,
+      version: 281479275675648
+    }
+  });
 
-blueprintBook.setContents(...await loadDirectory(""));
+  blueprintBook.setContents(...await loadDirectory(""));
 
-export default blueprintBook;
+  return blueprintBook;
+}
+
+export default generate;

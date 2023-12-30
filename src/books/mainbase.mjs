@@ -42,7 +42,8 @@ function generateMainBus() {
   return object;
 }
 
-const blueprintBook = new BlueprintBook({
+function generate(flags) {
+  let blueprintBook = new BlueprintBook({
     blueprint_book: {
       item: "blueprint_book",
       label: "Main Base",
@@ -67,22 +68,33 @@ const blueprintBook = new BlueprintBook({
   .addObject("./blueprints/belt/fluids-universal/plastic-double-mskitty.txt")
 
   .addObject("./blueprints/belt/fluids-universal/sulfur-sulfuric-combined-mskitty.txt")
-  .addObject("./blueprints/belt/fluids-expensive/batteries-mskitty.txt")
 
-  .addObject("./blueprints/belt/intermediates-expensive/gears-mskitty.txt")
-  .addObject("./blueprints/belt/intermediates-expensive/green-chips-drsupergood.txt")
-  .addObject("./blueprints/belt/intermediates-expensive/green-chips-15k-mskitty.txt")
-  .addObject("./blueprints/belt/intermediates-expensive/red-chips-kerza.txt")
-  .addObject("./blueprints/belt/intermediates-expensive/red-chips-3.6k-mskitty.txt")
-  .addObject("./blueprints/belt/intermediates-expensive/blue-chips-mskitty.txt")
+  if (flags.normal) {
+    // Missing: batteries, gears, green chips, red chips, blue chips
+    // blueprintBook = blueprintBook.addObject("./blueprints/belt/")
+  }
 
-  .addObject("./blueprints/belt/science/labs.txt")
+  if (flags.expensive) {
+    blueprintBook = blueprintBook.addObject("./blueprints/belt/fluids-expensive/batteries-mskitty.txt")
 
-  .addObject("./blueprints/smelting/kos-ash.txt")
-  .addObject("./blueprints/smelting/bus-upgradeable-mskitty.txt")
-  .addObject("./blueprints/smelting/steel-upgradeable-mskitty.txt")
-  .addObject("./blueprints/smelting/side-loading-copper-mskitty.txt")
-  .addObject("./blueprints/smelting/side-loading-iron-mskitty.txt")
-  .addObject("./blueprints/smelting/steel-mskitty.txt");
+      .addObject("./blueprints/belt/intermediates-expensive/gears-mskitty.txt")
+      .addObject("./blueprints/belt/intermediates-expensive/green-chips-drsupergood.txt")
+      .addObject("./blueprints/belt/intermediates-expensive/green-chips-15k-mskitty.txt")
+      .addObject("./blueprints/belt/intermediates-expensive/red-chips-kerza.txt")
+      .addObject("./blueprints/belt/intermediates-expensive/red-chips-3.6k-mskitty.txt")
+      .addObject("./blueprints/belt/intermediates-expensive/blue-chips-mskitty.txt")
+  }
 
-export default blueprintBook;
+  blueprintBook = blueprintBook.addObject("./blueprints/belt/science/labs.txt")
+
+    .addObject("./blueprints/smelting/kos-ash.txt")
+    .addObject("./blueprints/smelting/bus-upgradeable-mskitty.txt")
+    .addObject("./blueprints/smelting/steel-upgradeable-mskitty.txt")
+    .addObject("./blueprints/smelting/side-loading-copper-mskitty.txt")
+    .addObject("./blueprints/smelting/side-loading-iron-mskitty.txt")
+    .addObject("./blueprints/smelting/steel-mskitty.txt");
+
+  return blueprintBook;
+}
+
+export default generate;

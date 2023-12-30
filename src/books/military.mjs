@@ -1,6 +1,7 @@
 import { parseObject, BlueprintBook } from '../objects.mjs';
 
-const blueprintBook = new BlueprintBook({
+function generate(flags) {
+  return new BlueprintBook({
     blueprint_book: {
       item: "blueprint_book",
       label: "Military",
@@ -14,12 +15,11 @@ const blueprintBook = new BlueprintBook({
       active_index: 0,
       version: 281479275675648
     }
-  })
-  
-  .addObject("./blueprints/biters/walls-pinko.txt")
-  .addObject("./blueprints/biters/explosive-rockets-mskitty.txt")
-  .addObject("./blueprints/biters/artillery-shells-mskitty.txt")
-  .addObject("./blueprints/biters/war-rails-mskitty.txt")
-  .explode()
+  }).addObject("./blueprints/biters/walls-pinko.txt")
+    .addObject("./blueprints/biters/explosive-rockets-mskitty.txt")
+    .addObject("./blueprints/biters/artillery-shells-mskitty.txt")
+    .addObject("./blueprints/biters/war-rails-mskitty.txt")
+    .explode()
+}
 
-export default blueprintBook;
+export default generate;

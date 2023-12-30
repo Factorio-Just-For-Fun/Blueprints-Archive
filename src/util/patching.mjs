@@ -12,9 +12,28 @@ function standardizeStationNames(book) {
     .modifyAllStationNames(name => name.trim()); // Trim all station names
 }
 
-export default {
-  standardizeStationNames
+function patch(book) {
+  // Force existance of a description
+  book.modifyAllDescriptions(description => description ? description : "");
+
+  // Remove old tags
+  book.modifyAllDescriptions(description => {
+    let newDescription = description.replace(/\d{4}-\d{2}-\d{2} FJFF (Common )?Blueprints compiled by ((i_cant)|(Ashy)).\nhttps:\/\/discord\.gg\/ehHEDDnPWA/g, "").trim()
+    if (newDescription != description) console.warn("Blueprint contained outdated tag: " + newDescription);
+
+    return newDescription;
+  });
+
+  // Trim
+  book.modifyAllDescriptions(description => description.replace(/\n{3,}/g, "\n\n").trim());
+
+  // Fix names
+  book = standardizeStationNames(book);
+
+  return book;
 }
+
+export default patch;
 
 //
 // Run Program
@@ -26,5 +45,5 @@ import { parseObject } from '../objects.mjs';
 
 if (process.argv[1] == fileURLToPath(import.meta.url)) {
   const blueprint = parseObject(strings.decode(clipboard.readSync()));
-  clipboard.writeSync(strings.encode(standardizeStationNames(blueprint).toObject()));
+  clipboard.writeSync(strings.encode(patch(blueprint).toObject()));
 }
